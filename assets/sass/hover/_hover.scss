@@ -1,0 +1,44 @@
+/*!
+ * Hover.css (http://ianlunn.co.uk/)
+ * Version: 1.0.8
+ * Author: Ian Lunn @IanLunn
+ * Author URL: http://ianlunn.co.uk/
+ * Github: https://github.com/IanLunn/Hover
+
+ * Made available under a MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+
+ * Hover.css Copyright Ian Lunn 2014.
+ */
+
+
+@import "options";
+@import "mixins";
+@import "hacks";
+
+/* 2D TRANSITIONS */
+@import "effects/shrink";
+.shrink {
+	@include shrink();
+}
+
+@import "effects/rotate";
+@import "effects/grow-rotate";
+
+@import "effects/pulse-shrink";
+.pulse-shrink {
+    @include pulse-shrink();
+}
+
+@import "effects/hover";
+.float-hover {
+    @include hover();
+}
+
+@import "effects/skew";
+.skew {
+	@include skew();
+}
+
+@import "effects/hang";
+@import "effects/curl-top-right";

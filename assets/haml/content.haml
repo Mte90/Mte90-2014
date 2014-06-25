@@ -1,0 +1,12 @@
+<article <?php post_class(); ?>>
+%header
+	%h2.entry-title
+		%a(href="<?php the_permalink(); ?>")= the_title()
+	:php
+		get_template_part('templates/entry-meta');
+%div.entry-summary
+	:php
+		$metadesc = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true);
+		if (!empty($metadesc)) { echo $metadesc; } 
+		else { the_excerpt(); }
+</article>

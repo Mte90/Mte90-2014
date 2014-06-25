@@ -1,0 +1,4 @@
+%time.published(datetime="<?php echo get_the_time('c'); ?>")= get_the_date()
+%span.cat
+	:php
+		echo ' - '.get_the_category_list( __( ', ', 'roots' ) )
