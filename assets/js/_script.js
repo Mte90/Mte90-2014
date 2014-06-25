@@ -43,13 +43,23 @@
         jQuery('.widget_yt_widget').detach().appendTo('.entry-content');
       }
     });
-    jQuery('a:hover').has("img").css({
+    jQuery('a').has("img").css({
       transform: "none"
     });
+    jQuery('.entry-content a').has("img").css({
+      width: "100%"
+    });
+    jQuery('.entry-content-asset').has(".github-embed").css('padding-bottom', "25%");
     return $(".social-facebook,.social-linkedin").click(function(e) {
+      var link;
+      link = this;
       e.preventDefault();
       e.stopPropagation();
-      return bootbox.alert($(this).data('text') + '<br><br>' + '<a href="' + $(this).attr('href') + '">' + $(this).attr('href') + '</a>');
+      return $("html").animate({
+        scrollTop: 0
+      }, "fast", function() {
+        return bootbox.alert($(link).data('text') + '<br><br>' + '<a href="' + $(link).attr('href') + '">' + $(link).attr('href') + '</a>');
+      });
     });
   })(jQuery);
 

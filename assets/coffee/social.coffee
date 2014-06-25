@@ -1,4 +1,6 @@
 	$(".social-facebook,.social-linkedin").click (e) ->
+		link = this;
 		e.preventDefault()
 		e.stopPropagation()
-		bootbox.alert $(this).data('text') + '<br><br>' + '<a href="' + $(this).attr('href') + '">' + $(this).attr('href') + '</a>'
+		$("html").animate { scrollTop: 0 }, "fast", ->
+			bootbox.alert $(link).data('text') + '<br><br>' + '<a href="' + $(link).attr('href') + '">' + $(link).attr('href') + '</a>'

@@ -19,5 +19,8 @@
 			jQuery('.float_box').removeClass('affix')
 			jQuery('.widget_yt_widget').detach().appendTo('.entry-content')
 		return
-	
-	jQuery('a:hover').has("img").css({transform: "none"})
+
+	jQuery('a').has("img").css({transform: "none"})
+	jQuery('.entry-content a').has("img").css({width: "100%"})
+
+	jQuery('.entry-content-asset').has(".github-embed").css('padding-bottom', "25%")
