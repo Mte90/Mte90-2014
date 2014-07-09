@@ -226,13 +226,13 @@ body.modal-open {
 	padding-left: 15px !important;
 	padding-right: 15px !important;
 	color:#fff;
-	ul { 
+	ul.box-carousel { 
 		max-height: 176px;
 		height: 176px;
 		padding-left: 0px;
 		margin-bottom: 0px;
 		overflow:hidden;
-		li {
+		&> li {
 			height: 176px;
 			list-style:none;
 			&:first-child {
@@ -410,7 +410,7 @@ body.modal-open {
 
 .main article, .single-rx_aeolus .main {
 	background:white;
-	background-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.4);
 	color:black;
 	a {
 		color:white;
@@ -601,6 +601,23 @@ body.modal-open {
 	a {
 		color:black !important;
 		text-shadow: none !important;
+	}
+}
+
+.cml_flags li {
+	height: auto !important;
+}
+
+ul.cml_flags {
+    display: block;
+	padding-left: 0;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.single {
+	ul.cml_flags_on_title_before img {
+		margin-bottom: 5px;
 	}
 }
 

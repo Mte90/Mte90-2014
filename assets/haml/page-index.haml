@@ -6,7 +6,7 @@
 / First block
 %div.news.col-sm-6
 	<i class="fa-angle-up fa arrow shrink"></i>
-	%ul
+	%ul.box-carousel
 		:php
 			$first = true;
 			$the_query = new WP_Query('showposts=6&orderby=date&order=DESC'); 
@@ -18,7 +18,8 @@
 				$show = 'second';
 			} 
 		%li(class="<?php echo $show; ?>")
-			<a href="<?php the_permalink() ?>" class="float-hover"><?php the_title(); ?></a><br>
+			<?php echo cml_show_flags(array('only_existings' => true)); ?>
+			<a href="<?php the_permalink() ?>" class="float-hover"><?php echo $post->post_title; ?></a><br>
 			:php
 				get_template_part('templates/entry-meta');
 				$metadesc = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true);
@@ -30,7 +31,7 @@
 		
 %div.guest-post.col-sm-6
 	<i class="fa-angle-up fa arrow shrink"></i>
-	%ul
+	%ul.box-carousel
 		:php
 			$first = true;
 			$the_query = new WP_Query('showposts=6&orderby=date&order=DESC&category_name=video'); 
@@ -42,7 +43,8 @@
 				$show = 'second';
 			}
 		%li(class="<?php echo $show; ?>")
-			<a href="<?php the_permalink() ?>" class="float-hover"><?php the_title(); ?></a><br>
+			<?php echo cml_show_flags(array('only_existings' => true)); ?>
+			<a href="<?php the_permalink() ?>" class="float-hover"><?php echo $post->post_title; ?></a><br>
 			:php
 				get_template_part('templates/entry-meta');
 				$metadesc = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true);

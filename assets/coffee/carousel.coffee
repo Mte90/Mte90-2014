@@ -1,14 +1,14 @@
 	$('.news .arrow.fa-angle-up').click (e) ->
-		$(".news ul li:visible").hide().prevOrLast().slideDown "fast"
+		$(".news ul.box-carousel > li:visible").hide().prevOrLast().slideDown "fast"
 
 	$('.news .arrow.fa-angle-down').click (e) ->
-		$(".news ul li:visible").hide().nextOrFirst().slideDown "fast"
+		$(".news ul.box-carousel > li:visible").hide().nextOrFirst().slideDown "fast"
 
 	$('.guest-post .arrow.fa-angle-up').click (e) ->
-		$(".guest-post ul li:visible").hide().prevOrLast().slideDown "fast"
+		$(".guest-post ul.box-carousel > li:visible").hide().prevOrLast().slideDown "fast"
 
 	$('.guest-post .arrow.fa-angle-down').click (e) ->
-		$(".guest-post ul li:visible").hide().nextOrFirst().slideDown "fast"
+		$(".guest-post ul.box-carousel > li:visible").hide().nextOrFirst().slideDown "fast"
 		
 	$('.last-events .arrow').click (e) ->
 		$(".last-events .first-block").slideToggle()
