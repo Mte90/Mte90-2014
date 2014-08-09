@@ -10,7 +10,7 @@
   <ul class="box-carousel">
     <?php
       $first = true;
-      $the_query = new WP_Query('showposts=6&orderby=date&order=DESC'); 
+      $the_query = new WP_Query('showposts=6&orderby=date&order=DESC&cat=-32'); 
       while ($the_query -> have_posts()) : $the_query -> the_post();
       if($first) {
       	$show = '';
@@ -21,7 +21,7 @@
     ?>
     <li class="<?php echo $show; ?>">
       <?php echo cml_show_flags(array('only_existings' => true)); ?>
-      <a href="<?php the_permalink() ?>" class="float-hover"><?php echo $post->post_title; ?></a><br>
+      <a href="<?php the_permalink() ?>" class="float-hover"><?php echo $post->post_title; ?></a>
       <?php
         get_template_part('templates/entry-meta');
         $metadesc = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true);
@@ -51,7 +51,7 @@
     ?>
     <li class="<?php echo $show; ?>">
       <?php echo cml_show_flags(array('only_existings' => true)); ?>
-      <a href="<?php the_permalink() ?>" class="float-hover"><?php echo $post->post_title; ?></a><br>
+      <a href="<?php the_permalink() ?>" class="float-hover"><?php echo $post->post_title; ?></a>
       <?php
         get_template_part('templates/entry-meta');
         $metadesc = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true);
@@ -92,7 +92,7 @@
   </h3>
   <span>
     <?php
-      _e('My open source projects <3' , 'roots');
+      _e('My open source projects <i class="fa fa-heart"></i>' , 'roots');
     ?>
   </span>
 </div>

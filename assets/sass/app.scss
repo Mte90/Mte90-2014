@@ -242,6 +242,9 @@ body.modal-open {
 				margin-top:10px;
 			}
 		}
+		p {
+			margin-top: 0px;
+		}
 		.cat a {
 			font-size: 18px;
 			display:inline;
@@ -253,7 +256,6 @@ body.modal-open {
 		text-transform: uppercase;
 		font-size: 24px;
 		display:block;
-		margin-bottom:-10px;
 		text-shadow: 0px 1px 1px #000;
 		&:hover {
 			color:#fff;
@@ -417,6 +419,7 @@ body.modal-open {
 		font-weight: bold;
 		text-shadow:0px 1px 1px #000;
 		@include skew();
+		line-height: 14px;
 	}
 	header {
 		padding-left: 15px;
@@ -439,6 +442,9 @@ body.modal-open {
 			width:80%;
 			height: auto;
 		}
+		img.alignnone, img.aligncenter {
+			width:auto;
+		}
 	}
 }
 
@@ -456,10 +462,9 @@ body.modal-open {
 	padding-bottom: 56.25%;
 	padding-top: 30px;
 	height: 0px;
-	overflow: hidden;
 	margin-bottom: 10px;
 	iframe {
-		position: absolute;
+		position: absolute !important;
 		top: 0px;
 		left: 0px;
 		width: 100%;
@@ -505,6 +510,7 @@ body.modal-open {
 	background-color: rgba(0, 0, 0, 0.8);
 	color:white;
 	padding-bottom: 10px;
+	padding-top: 10px;
 	a {
 		color: #177BA5;
 	}
@@ -606,13 +612,15 @@ body.modal-open {
 
 .cml_flags li {
 	height: auto !important;
+	margin:0;
 }
 
 ul.cml_flags {
     display: block;
-	padding-left: 0;
 	text-transform: uppercase;
 	text-align: center;
+	padding:0;
+	margin-top: -8px;
 }
 
 .single {

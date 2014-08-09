@@ -243,3 +243,40 @@ function append_query_string( $url ) {
 }
 
 add_filter( 'the_permalink', 'append_query_string' );
+
+add_action( 'wp_head', 'tgm_tame_disqus_comments' );
+
+function tgm_tame_disqus_comments() {
+	if ( is_singular( array( 'post', 'page' ) ) && comments_open() )
+		return;
+	remove_action( 'loop_end', 'dsq_loop_end' );
+	remove_action( 'wp_footer', 'dsq_output_footer_comment_js' );
+}
+
+add_filter( 'addthis_post_exclude', 'addthis_post_exclude' );
+
+function addthis_post_exclude( $display ) {
+	if ( is_front_page() || is_archive() )
+		$display = false;
+	return $display;
+}
+
+add_action( 'wp_enqueue_scripts', function() {
+	if ( is_front_page() || is_archive() ) {
+		wp_dequeue_style( 'crayon' );
+		wp_deregister_style( 'crayon' );
+		wp_dequeue_style( 'xagithub_css' );
+		wp_deregister_style( 'xagithub_css' );
+		wp_dequeue_style( 'dlm-page-addon-frontend' );
+		wp_deregister_style( 'dlm-page-addon-frontend' );
+		wp_dequeue_script( 'crayon_js' );
+		wp_deregister_script( 'crayon_js' );
+	}
+	if( !is_page( 183 )) {
+		wp_dequeue_style( 'dlm-page-addon-frontend' );
+		wp_deregister_style( 'dlm-page-addon-frontend' );
+	}
+	if ( !is_singular( array( 'dlm_download' ) ) && !is_post_type_archive( 'dlm_download' ) && !is_tax( 'dlm_download_category' ) && !is_page( 183 ) ) {
+		wp_dequeue_style( 'dlm-frontend' );
+	}
+}, 200 );
