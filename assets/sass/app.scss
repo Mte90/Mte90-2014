@@ -227,8 +227,8 @@ body.modal-open {
 	padding-right: 15px !important;
 	color:#fff;
 	ul.box-carousel { 
-		max-height: 176px;
-		height: 176px;
+		max-height: 184px;
+		height: 184px;
 		padding-left: 0px;
 		margin-bottom: 0px;
 		overflow:hidden;
@@ -239,8 +239,15 @@ body.modal-open {
 				display:block;
 			}
 			p {
-				margin-top:10px;
+				margin-top:-6px;
 			}
+			.published, .cat {
+				position: relative;
+				top: -4px;
+			}
+		}
+		a.float-hover {
+			margin-top: -8px;
 		}
 		p {
 			margin-top: 0px;
@@ -254,7 +261,7 @@ body.modal-open {
 	}
 	a {
 		text-transform: uppercase;
-		font-size: 24px;
+		font-size: 20px;
 		display:block;
 		text-shadow: 0px 1px 1px #000;
 		&:hover {
@@ -263,6 +270,12 @@ body.modal-open {
 	}
 	.second {
 		display: none;
+	}
+	.fa-angle-up {
+		margin-top: -4px;
+	}
+	.fa-angle-down {
+		margin-bottom: -4px;
 	}
 }
 
@@ -382,7 +395,7 @@ body.modal-open {
 .archive,.blog {
 	.main {
 		background:white;
-		background-color: rgba(255, 255, 255, 0.1);
+		background-color: rgba(255, 255, 255, 0.3);
 	}
 	header {
 		padding-left:0 !important;
@@ -394,8 +407,7 @@ body.modal-open {
 	}
 	article {
 		background: none !important;
-		margin-left: 10px;
-		margin-bottom: 20px;
+		margin: 0 10px 20px;
 	}
 	.entry-title {
 		text-shadow: 0px 1px 1px #000;
@@ -417,12 +429,18 @@ body.modal-open {
 	a {
 		color:white;
 		font-weight: bold;
-		text-shadow:0px 1px 1px #000;
+		text-shadow:0px 0px 4px #000;
 		@include skew();
-		line-height: 14px;
+		line-height: 30px;
 	}
+    .entry-content {
+        a {
+            line-height: 14px;
+        }
+    }
 	header {
 		padding-left: 15px;
+        padding-right: 15px;
 		h1 {
 			margin-top: 0px;
 			padding-top: 10px;
@@ -560,6 +578,10 @@ body.modal-open {
 	height:30px;
 }
 
+.at300b {
+    transform:unset !important;
+}
+
 .pager {
 	list-style: none;
 	li {
@@ -584,17 +606,6 @@ body.modal-open {
 /* Gallery Shortcode */
 .gallery-row { padding: 15px 0; }
 
-.onebox-footer-wrapper .onebox-footer-button a {
-	display: block;
-	height: auto;
-	padding: 2px 5px;
-	border:0;
-}
-
-.onebox-result {
-	width:100%;
-}
-
 #disqus_thread {
 	width: 95%;
     margin: 0px auto;
@@ -603,11 +614,37 @@ body.modal-open {
     padding-right: 1%;
 }
 
-.github-embed {
-	a {
-		color:black !important;
-		text-shadow: none !important;
-	}
+.cml-flag-tiny-it:before {
+    content: url(http://mte90.net/wp-content/plugins/ceceppa-multilingua/flags/tiny/it_IT.png);
+    width: 16px;
+    height: 11px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.cml-flag-tiny-en:before {
+    content: url(http://mte90.net/wp-content/plugins/ceceppa-multilingua/flags/tiny/en_GB.png);
+    width: 16px;
+    height: 11px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.cml-flag-small-it:before {
+    content: url(.http://mte90.net/wp-content/plugins/ceceppa-multilingua/flags/small/it_IT.png);
+    width: 32px;
+    height: 33px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.cml-flag-small-en:before {
+    content: url(http://mte90.net/wp-content/plugins/ceceppa-multilingua/flags/small/en_GB.png);
+    width: 32px;
+    height: 33px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
 }
 
 .cml_flags li {
@@ -620,13 +657,44 @@ ul.cml_flags {
 	text-transform: uppercase;
 	text-align: center;
 	padding:0;
-	margin-top: -8px;
+	margin-top: -10px;
 }
 
 .single {
 	ul.cml_flags_on_title_before img {
 		margin-bottom: 5px;
 	}
+}
+
+.backstretch > img {
+    display: block !important;
+}
+
+.github-embed { 
+	padding: 0.5em 2em 0.5em 4em;
+	background-color: #fdfdfd;
+	width: 80%;
+	margin: auto;
+	margin-bottom: 1em;
+	background-image: url('https://github.com/github/media/raw/master/octocats/blacktocat-32.png');
+	background-repeat: no-repeat;
+	background-position: 1em 1em;
+	box-shadow: 2px 2px 2px #ddd;
+	a {
+		color:black !important;
+		text-shadow: none !important;
+	}
+}
+
+li.github-repo-contributor {
+	clear: both;
+	display: block;
+}
+
+.github-repo-contributor-avatar {
+	float: left;
+	margin-right: 1em;
+	margin-bottom: 0.5em;
 }
 
 /* ==========================================================================
@@ -659,9 +727,29 @@ ul.cml_flags {
 
 ul.xagithub {
 	padding-left: 20px;
-	li span {
-		color:white;
-	}
+}
+ul.xagithub li {
+	list-style-image: url(http://mte90.net/wp-content/plugins/WP-Xagithub-Activity/images/github.png);
+	padding: 5pt 0 5pt 0;
+}
+ul.xagithub li:first-child { padding-top: 0; }
+ul.xagithub li:last-child { 
+	border-bottom: none;
+	padding-bottom: 0;
+}
+ul.xagithub li a { 
+	vertical-align: text-bottom;
+	font-style: italic;
+	word-break: break-word;
+}
+ul.xagithub li span {
+	color: white;
+	vertical-align: text-bottom;
+	padding: 2pt 5pt 2pt 5pt;
+	background-color: rgba(10,10,10,0.1);
+}
+ul.xagithub li em {
+	padding-right: 5pt;
 }
 
 .widget_search {

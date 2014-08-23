@@ -262,6 +262,16 @@ function addthis_post_exclude( $display ) {
 }
 
 add_action( 'wp_enqueue_scripts', function() {
+	if ( !is_admin() ) {
+		wp_dequeue_script( 'quicktags-min' );
+		wp_deregister_script( 'quicktags-min' );
+		wp_dequeue_style( 'ceceppaml-flags' );
+		wp_deregister_style( 'ceceppaml-flags' );
+		wp_dequeue_style( 'xagithub_css' );
+		wp_deregister_style( 'xagithub_css' );
+		wp_dequeue_style( 'github-embed' );
+		wp_deregister_style( 'github-embed' );
+	}
 	if ( is_front_page() || is_archive() ) {
 		wp_dequeue_style( 'crayon' );
 		wp_deregister_style( 'crayon' );
@@ -272,7 +282,7 @@ add_action( 'wp_enqueue_scripts', function() {
 		wp_dequeue_script( 'crayon_js' );
 		wp_deregister_script( 'crayon_js' );
 	}
-	if( !is_page( 183 )) {
+	if ( !is_page( 183 ) ) {
 		wp_dequeue_style( 'dlm-page-addon-frontend' );
 		wp_deregister_style( 'dlm-page-addon-frontend' );
 	}

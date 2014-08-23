@@ -129,7 +129,7 @@
       }
     ?>
     <li class="<?php echo $block; ?>">
-      <a href="<?php the_permalink() ?>" class="float-hover"><?php the_title(); ?></a>
+      <a alt="<?php the_permalink() ?>" href="<?php the_permalink() ?>" class="float-hover"><?php the_title(); ?></a>
     </li>
     <?php
       endwhile;
