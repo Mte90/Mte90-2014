@@ -4,9 +4,11 @@
 	}
 	if (have_comments()) {
 %section#comments(class="col-sm-12")
-	%h3= printf(_n('One Response to &ldquo;%2$s&rdquo;', '%1$s Responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'roots'), number_format_i18n(get_comments_number()), get_the_title())
+	%h3
+		:php
+			printf(_n('One Response to &ldquo;%2$s&rdquo;', '%1$s Responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'roots'), number_format_i18n(get_comments_number()), get_the_title())
 	%ol.media-list
-		- wp_list_comments(array('walker' => new Roots_Walker_Comment))
+		- wp_list_comments(array('format' => 'html5','avatar_size' => 42))
 	:php
 		if (get_comment_pages_count() > 1 && get_option('page_comments')) {
 	%nav
@@ -46,7 +48,9 @@
 	%form#commentform(action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post")
 		:php
 			if (is_user_logged_in()) {
-		%p= printf(__('Logged in as <a href="%s/wp-admin/profile.php">%s</a>.', 'roots'), get_option('siteurl'), $user_identity)
+		%p
+			:php
+				printf(__('Logged in as <a href="%s/wp-admin/profile.php">%s</a>.', 'roots'), get_option('siteurl'), $user_identity)
 		%a(href="<?php wp_logout_url(get_permalink()); ?>" title="<?php __('Log out of this account', 'roots'); ?>")= __('Log out &raquo;', 'roots')
 		:php
 			} else {

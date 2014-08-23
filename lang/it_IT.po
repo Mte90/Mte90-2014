@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Roots\n"
-"POT-Creation-Date: 2014-06-24 23:12+0100\n"
-"PO-Revision-Date: 2014-06-24 23:16+0100\n"
+"POT-Creation-Date: 2014-08-23 17:23+0100\n"
+"PO-Revision-Date: 2014-08-23 17:25+0100\n"
 "Last-Translator: Mte90 <mte90net@gmail.com>\n"
 "Language-Team: it <kde-i18n-it@kde.org>\n"
 "Language: Italian\n"
@@ -13,7 +13,9 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
 "X-Poedit-Basepath: ../\n"
-"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-KeywordsList: __;_e;_n;_x;esc_html_e;esc_html__;esc_attr_e;"
+"esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: base.php:6
@@ -66,31 +68,31 @@ msgstr "Modifica"
 msgid "Your comment is awaiting moderation."
 msgstr "Il tuo commento &egrave; in attesa di moderazione."
 
-#: templates/page-index.php:72
+#: templates/page-index.php:74
 msgid "Who am I?"
 msgstr "Chi sono?"
 
-#: templates/page-index.php:78
+#: templates/page-index.php:80
 msgid "I am a web developer and lover of open source."
 msgstr "Sono uno sviluppatore e amante dell'open source."
 
-#: templates/page-index.php:87
+#: templates/page-index.php:89
 msgid "My project"
 msgstr "I miei progetti"
 
-#: templates/page-index.php:93
-msgid "My open source projects <3"
-msgstr "I miei progetti open source <3"
+#: templates/page-index.php:95
+msgid "My open source projects <i class=\"fa fa-heart\"></i>"
+msgstr "I miei progetti open source <i class=\"fa fa-heart\"></i>"
 
-#: templates/page-index.php:102
+#: templates/page-index.php:104
 msgid "My Job"
 msgstr "Il mio lavoro"
 
-#: templates/page-index.php:108
+#: templates/page-index.php:110
 msgid "I, my passions and my work"
 msgstr "Io, le mie passioni ed il mio lavoro"
 
-#: templates/page-index.php:136
+#: templates/page-index.php:138
 msgid "Archive"
 msgstr "Archivio"
 
@@ -106,70 +108,77 @@ msgstr "Cerca:"
 msgid ", "
 msgstr ""
 
-#: templates/comments.php:22
+#: templates/comments.php:10
+#, php-format
+msgid "One Response to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Responses to &ldquo;%2$s&rdquo;"
+msgstr[0] "Una risposta a &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s risposte a &ldquo;%2$s&rdquo;"
+
+#: templates/comments.php:26
 msgid "&larr; Older comments"
 msgstr "&larr; Vecchi commenti"
 
-#: templates/comments.php:31
+#: templates/comments.php:35
 msgid "Newer comments &rarr;"
 msgstr "Commenti pi&ugrave recenti &rarr;"
 
-#: templates/comments.php:45
+#: templates/comments.php:49
 msgid "Comments are closed."
 msgstr "I commenti sono chiusi."
 
-#: templates/comments.php:57
+#: templates/comments.php:61
 msgid "Leave a Reply"
 msgstr "Lascia un commento "
 
-#: templates/comments.php:57
+#: templates/comments.php:61
 #, php-format
 msgid "Leave a Reply to %s"
 msgstr "Lascia un commento a %s"
 
-#: templates/comments.php:62
+#: templates/comments.php:66
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr "Devi <a href=\"%s\">loggarti</a>per pubblicare un commento."
 
-#: templates/comments.php:70
+#: templates/comments.php:76
 #, php-format
 msgid "Logged in as <a href=\"%s/wp-admin/profile.php\">%s</a>."
 msgstr "Loggato come <a href=\"%s/wp-admin/profile.php\">%s</a>."
 
-#: templates/comments.php:71
+#: templates/comments.php:79
 msgid "Log out of this account"
 msgstr "Sloggati da questo account"
 
-#: templates/comments.php:71
+#: templates/comments.php:79
 msgid "Log out &raquo;"
 msgstr "Sloggati &raquo;"
 
-#: templates/comments.php:78
+#: templates/comments.php:86
 msgid "Name"
 msgstr "Nome"
 
-#: templates/comments.php:79 templates/comments.php:88
+#: templates/comments.php:87 templates/comments.php:96
 msgid " (required)"
 msgstr " (obbligatorio)"
 
-#: templates/comments.php:87
+#: templates/comments.php:95
 msgid "Email (will not be published)"
 msgstr "Email (non sar&agrave)"
 
-#: templates/comments.php:96
+#: templates/comments.php:104
 msgid "Website"
 msgstr "Sito Web"
 
-#: templates/comments.php:107
+#: templates/comments.php:115
 msgid "Comment"
 msgstr "Commento"
 
-#: templates/comments.php:113
+#: templates/comments.php:121
 msgid "Submit Comment"
 msgstr "Invia il commento"
 
-#: templates/header-top-navbar.php:4 templates/header-top-navbar.php:13
+#: templates/header-top-navbar.php:4 templates/header-top-navbar.php:16
 msgid ""
 "I don't add people that don't know, so put up else I will not accept your "
 "request!"
@@ -229,62 +238,79 @@ msgstr ""
 msgid "Youtube Float Post"
 msgstr ""
 
-#: lib/custom.php:156 lib/custom.php:170
+#: lib/custom.php:156
+msgctxt "Projects General Name"
 msgid "Projects"
 msgstr "Progetti"
 
-#: lib/custom.php:157 lib/custom.php:199
+#: lib/custom.php:157
+msgctxt "Projects Singular Name"
+msgid "Projects"
+msgstr "Progetti"
+
+#: lib/custom.php:158 lib/custom.php:172
+msgid "Projects"
+msgstr "Progetti"
+
+#: lib/custom.php:159 lib/custom.php:201
 msgid "Parent Item:"
 msgstr ""
 
-#: lib/custom.php:158 lib/custom.php:200
+#: lib/custom.php:160 lib/custom.php:202
 msgid "All Items"
 msgstr ""
 
-#: lib/custom.php:159 lib/custom.php:201
+#: lib/custom.php:161 lib/custom.php:203
 msgid "View Item"
 msgstr "Visualizza"
 
-#: lib/custom.php:160 lib/custom.php:202
+#: lib/custom.php:162 lib/custom.php:204
 msgid "Add New Item"
 msgstr "Aggiungi"
 
-#: lib/custom.php:161 lib/custom.php:203
+#: lib/custom.php:163 lib/custom.php:205
 msgid "Add New"
 msgstr "Aggiungi"
 
-#: lib/custom.php:162 lib/custom.php:204
+#: lib/custom.php:164 lib/custom.php:206
 msgid "Edit Item"
 msgstr "Modifica"
 
-#: lib/custom.php:163 lib/custom.php:205
+#: lib/custom.php:165 lib/custom.php:207
 msgid "Update Item"
 msgstr "Aggiorna"
 
-#: lib/custom.php:164 lib/custom.php:206
-#, fuzzy
+#: lib/custom.php:166 lib/custom.php:208
 msgid "Search Item"
 msgstr "Cerca"
 
-#: lib/custom.php:165 lib/custom.php:207
-#, fuzzy
+#: lib/custom.php:167 lib/custom.php:209
 msgid "Not found"
 msgstr "Non trovato"
 
-#: lib/custom.php:166 lib/custom.php:208
+#: lib/custom.php:168 lib/custom.php:210
 msgid "Not found in Trash"
 msgstr ""
 
-#: lib/custom.php:169
+#: lib/custom.php:171
 msgid "projects"
 msgstr ""
 
-#: lib/custom.php:198 lib/custom.php:212
-#, fuzzy
+#: lib/custom.php:198
+msgctxt "Post Type General Name"
+msgid "Guest Posts"
+msgstr "Articoli pi&ugrave recenti"
+
+#: lib/custom.php:199
+msgctxt "Post Type Singular Name"
 msgid "Guest Post"
 msgstr "Articoli pi&ugrave recenti"
 
-#: lib/custom.php:211
+#: lib/custom.php:200 lib/custom.php:214
+msgid "Guest Post"
+msgstr "Articoli pi&ugrave recenti"
+
+#: lib/custom.php:213
 msgid "guest_post"
 msgstr ""
 
@@ -402,7 +428,7 @@ msgstr ""
 
 #: lib/cmb/helpers/cmb_Meta_Box_ajax.php:47
 msgid "Please Try Again"
-msgstr ""
+msgstr "Prova di nuovo"
 
 #: lib/cmb/helpers/cmb_Meta_Box_ajax.php:131
 msgid "Remove Embed"
@@ -472,11 +498,6 @@ msgstr ""
 
 #~ msgid "vCard"
 #~ msgstr "vCard"
-
-#~ msgid "One Response to &ldquo;%2$s&rdquo;"
-#~ msgid_plural "%1$s Responses to &ldquo;%2$s&rdquo;"
-#~ msgstr[0] "Una risposta a &ldquo;%2$s&rdquo;"
-#~ msgstr[1] "%1$s risposte a &ldquo;%2$s&rdquo;"
 
 #~ msgid "By"
 #~ msgstr "Scritto da"
