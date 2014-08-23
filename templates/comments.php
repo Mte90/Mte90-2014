@@ -5,9 +5,13 @@
   if (have_comments()) {
 ?>
 <section id="comments" class="col-sm-12">
-  <h3><?php echo printf(_n('One Response to &ldquo;%2$s&rdquo;', '%1$s Responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'roots'), number_format_i18n(get_comments_number()), get_the_title()); ?></h3>
+  <h3>
+    <?php
+      printf(_n('One Response to &ldquo;%2$s&rdquo;', '%1$s Responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'roots'), number_format_i18n(get_comments_number()), get_the_title())
+    ?>
+  </h3>
   <ol class="media-list">
-    <?php wp_list_comments(array('walker' => new Roots_Walker_Comment)); ?>
+    <?php wp_list_comments(array('format' => 'html5','avatar_size' => 42)); ?>
   </ol>
   <?php
     if (get_comment_pages_count() > 1 && get_option('page_comments')) {
@@ -67,7 +71,11 @@
     <?php
       if (is_user_logged_in()) {
     ?>
-    <p><?php echo printf(__('Logged in as <a href="%s/wp-admin/profile.php">%s</a>.', 'roots'), get_option('siteurl'), $user_identity); ?></p>
+    <p>
+      <?php
+        printf(__('Logged in as <a href="%s/wp-admin/profile.php">%s</a>.', 'roots'), get_option('siteurl'), $user_identity)
+      ?>
+    </p>
     <a href="<?php wp_logout_url(get_permalink()); ?>" title="<?php __('Log out of this account', 'roots'); ?>"><?php echo __('Log out &raquo;', 'roots'); ?></a>
     <?php
       } else {
