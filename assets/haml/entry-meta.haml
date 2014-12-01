@@ -1,4 +1,8 @@
 %time.published(datetime="<?php echo get_the_time('c'); ?>")= get_the_date()
+%span.byline.author
+	:php
+		echo __('By', 'roots');
+	%a.fn(href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" rel="author")= get_the_author()
 %span.cat
 	:php
 		echo ' - '.get_the_category_list( __( ', ', 'roots' ) )

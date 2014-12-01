@@ -1,5 +1,5 @@
 /**
- * bootbox.js [master branch]
+ * bootbox.js [v4.2.0]
  *
  * http://bootboxjs.com/license.txt
  */
@@ -381,6 +381,14 @@
     // it, but we need to make sure we respect a preference not to show it
     shouldShow = (options.show === undefined) ? true : options.show;
 
+    // check if the browser supports the option.inputType
+    var html5inputs = ["date","time","number"];
+    var i = document.createElement("input");
+    i.setAttribute("type", options.inputType);
+    if(html5inputs[options.inputType]){
+      options.inputType = i.type;
+    }
+
     /**
      * overrides; undo anything the user tried to set they shouldn't have
      */
@@ -538,8 +546,6 @@
 
     form.on("submit", function(e) {
       e.preventDefault();
-      // Fix for SammyJS (or similar JS routing library) hijacking the form post.
-      e.stopPropagation();
       // @TODO can we actually click *the* button object instead?
       // e.g. buttons.confirm.click() or similar
       dialog.find(".btn-primary").click();
@@ -566,7 +572,6 @@
     options = sanitize(options);
 
     var dialog = $(templates.dialog);
-    var innerDialog = dialog.find(".modal-dialog");
     var body = dialog.find(".modal-body");
     var buttons = options.buttons;
     var buttonStr = "";
@@ -591,14 +596,6 @@
 
     if (options.className) {
       dialog.addClass(options.className);
-    }
-
-    if (options.size === "large") {
-      innerDialog.addClass("modal-lg");
-    }
-
-    if (options.size === "small") {
-      innerDialog.addClass("modal-sm");
     }
 
     if (options.title) {
@@ -640,7 +637,7 @@
       }
     });
 
-    /*
+    
     dialog.on("show.bs.modal", function() {
       // sadly this doesn't work; show is called *just* before
       // the backdrop is added so we'd need a setTimeout hack or
@@ -649,7 +646,7 @@
         dialog.next(".modal-backdrop").addClass("bootbox-backdrop");
       }
     });
-    */
+    
 
     dialog.on("shown.bs.modal", function() {
       dialog.find(".btn-primary:first").focus();
@@ -749,8 +746,6 @@
 
   exports.hideAll = function() {
     $(".bootbox").modal("hide");
-
-    return exports;
   };
 
 
@@ -764,11 +759,6 @@
       CANCEL  : "Cancelar",
       CONFIRM : "Sim"
     },
-    cs : {
-      OK      : "OK",
-      CANCEL  : "Zrušit",
-      CONFIRM : "Potvrdit"
-    },
     da : {
       OK      : "OK",
       CANCEL  : "Annuller",
@@ -779,11 +769,6 @@
       CANCEL  : "Abbrechen",
       CONFIRM : "Akzeptieren"
     },
-    el : {
-      OK      : "Εντάξει",
-      CANCEL  : "Ακύρωση",
-      CONFIRM : "Επιβεβαίωση"
-    },
     en : {
       OK      : "OK",
       CANCEL  : "Cancel",
@@ -793,11 +778,6 @@
       OK      : "OK",
       CANCEL  : "Cancelar",
       CONFIRM : "Aceptar"
-    },
-    et : {
-      OK      : "OK",
-      CANCEL  : "Katkesta",
-      CONFIRM : "OK"
     },
     fi : {
       OK      : "OK",
@@ -813,11 +793,6 @@
       OK      : "אישור",
       CANCEL  : "ביטול",
       CONFIRM : "אישור"
-    },
-    id : {
-      OK      : "OK",
-      CANCEL  : "Batal",
-      CONFIRM : "OK"
     },
     it : {
       OK      : "OK",
@@ -848,11 +823,6 @@
       OK      : "OK",
       CANCEL  : "Anuluj",
       CONFIRM : "Potwierdź"
-    },
-    pt : {
-      OK      : "OK",
-      CANCEL  : "Cancelar",
-      CONFIRM : "Confirmar"
     },
     ru : {
       OK      : "OK",
