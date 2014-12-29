@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Roots\n"
 "POT-Creation-Date: 2014-08-23 17:23+0100\n"
-"PO-Revision-Date: 2014-08-23 17:25+0100\n"
+"PO-Revision-Date: 2014-09-26 14:12+0100\n"
 "Last-Translator: Mte90 <mte90net@gmail.com>\n"
 "Language-Team: it <kde-i18n-it@kde.org>\n"
 "Language: Italian\n"
@@ -164,7 +164,7 @@ msgstr " (obbligatorio)"
 
 #: templates/comments.php:95
 msgid "Email (will not be published)"
-msgstr "Email (non sar&agrave)"
+msgstr "Email (non sar&agrave pubblicato)"
 
 #: templates/comments.php:104
 msgid "Website"
@@ -299,16 +299,16 @@ msgstr ""
 #: lib/custom.php:198
 msgctxt "Post Type General Name"
 msgid "Guest Posts"
-msgstr "Articoli pi&ugrave recenti"
+msgstr "Guest Post"
 
 #: lib/custom.php:199
 msgctxt "Post Type Singular Name"
 msgid "Guest Post"
-msgstr "Articoli pi&ugrave recenti"
+msgstr "Guest Post"
 
 #: lib/custom.php:200 lib/custom.php:214
 msgid "Guest Post"
-msgstr "Articoli pi&ugrave recenti"
+msgstr "Guest Post"
 
 #: lib/custom.php:213
 msgid "guest_post"

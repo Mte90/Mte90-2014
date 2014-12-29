@@ -244,13 +244,15 @@ function append_query_string( $url ) {
 
 add_filter( 'the_permalink', 'append_query_string' );
 
-add_action( 'wp_head', 'tgm_tame_disqus_comments' );
+add_filter( 'the_permalink_rss', 'guest_post_permalink' );
 
-function tgm_tame_disqus_comments() {
-	if ( is_singular( array( 'post', 'page' ) ) && comments_open() )
-		return;
-	remove_action( 'loop_end', 'dsq_loop_end' );
-	remove_action( 'wp_footer', 'dsq_output_footer_comment_js' );
+function guest_post_permalink( $link ) {
+	$id = url_to_postid( $link );
+	if ( 'guest_post' === get_post_type( $id ) ) {
+		return get_post_meta( $id, '_cmb_gp_link', true );
+	} else {
+		return $link;
+	}
 }
 
 add_filter( 'addthis_post_exclude', 'addthis_post_exclude' );
@@ -269,8 +271,8 @@ add_action( 'wp_enqueue_scripts', function() {
 		wp_deregister_style( 'ceceppaml-flags' );
 		wp_dequeue_style( 'xagithub_css' );
 		wp_deregister_style( 'xagithub_css' );
-		wp_dequeue_style( 'github-embed' );
-		wp_deregister_style( 'github-embed' );
+		wp_dequeue_style( 'github-oembed' );
+		wp_deregister_style( 'github-oembed' );
 	}
 	if ( is_front_page() || is_archive() ) {
 		wp_dequeue_style( 'crayon' );
@@ -290,3 +292,18 @@ add_action( 'wp_enqueue_scripts', function() {
 		wp_dequeue_style( 'dlm-frontend' );
 	}
 }, 200 );
+
+function wpseo_disable_rel_author( $link ) {
+	return false;
+}
+
+add_filter( 'wpseo_author_link', 'wpseo_disable_rel_author' );
+
+function feed_request( $qv ) {
+	if ( isset( $qv[ 'feed' ] ) && !isset( $qv[ 'post_type' ] ) ) {
+		$qv[ 'post_type' ] = array( 'post', 'guest_post' );
+	}
+	return $qv;
+}
+
+add_filter( 'request', 'feed_request' );

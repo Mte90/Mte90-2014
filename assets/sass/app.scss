@@ -523,8 +523,13 @@ body.modal-open {
     .content, .wrap {
         padding: 0px !important;
     }
-    a {
-        color:black;
+    .main a {
+        color:white;
+        font-weight: bold;
+        text-shadow:0px 0px 4px #000;
+        @include skew();
+		top: -1px;
+		position: relative;
     }
     .addthis_toolbox { 
         padding-top: 3px;
