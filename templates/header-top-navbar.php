@@ -56,7 +56,7 @@
           <?php _e("Mozilla Contributor", 'roots'); ?>
         </li>
         <li>
-          <?php _e("KDE/Qt Lover", 'roots'); ?>
+          <?php _e("KDE/Qt Addicted", 'roots'); ?>
         </li>
       </ul>
     </div>

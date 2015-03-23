@@ -9,7 +9,8 @@
       maximum: 1200,
       minFont: 12,
       maxFont: 20
-
+	
+	jQuery('.main').css('min-height',jQuery('aside').height() + 20)
 	jQuery('body').backstretch(template.path + '/assets/img/background.jpg')
 	jQuery('.widget_yt_widget .fixed_box').width(jQuery('.widget').parent().width() + 30)
 

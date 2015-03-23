@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Roots\n"
 "POT-Creation-Date: 2014-08-23 17:23+0100\n"
-"PO-Revision-Date: 2014-09-26 14:12+0100\n"
+"PO-Revision-Date: 2015-03-23 10:59+0100\n"
 "Last-Translator: Mte90 <mte90net@gmail.com>\n"
 "Language-Team: it <kde-i18n-it@kde.org>\n"
-"Language: Italian\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.7.3\n"
 "Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-KeywordsList: __;_e;_n;_x;esc_html_e;esc_html__;esc_attr_e;"
@@ -121,7 +121,7 @@ msgstr "&larr; Vecchi commenti"
 
 #: templates/comments.php:35
 msgid "Newer comments &rarr;"
-msgstr "Commenti pi&ugrave recenti &rarr;"
+msgstr "Commenti pi&ugrave; recenti &rarr;"
 
 #: templates/comments.php:49
 msgid "Comments are closed."
@@ -164,7 +164,7 @@ msgstr " (obbligatorio)"
 
 #: templates/comments.php:95
 msgid "Email (will not be published)"
-msgstr "Email (non sar&agrave pubblicato)"
+msgstr "Email (non sar&agrave; pubblicato)"
 
 #: templates/comments.php:104
 msgid "Website"
@@ -320,7 +320,7 @@ msgstr "Primary Navigation"
 
 #: lib/titles.php:10
 msgid "Latest Posts"
-msgstr "Articoli pi&ugrave recenti"
+msgstr "Articoli pi&ugrave; recenti"
 
 #: lib/titles.php:19
 #, php-format
@@ -477,7 +477,7 @@ msgstr ""
 
 #~ msgid "Add all current published pages to the Primary Navigation"
 #~ msgstr ""
-#~ "Aggiungi tutte le pagine pubblicate al men&ugrave Primary Navigation"
+#~ "Aggiungi tutte le pagine pubblicate al men&ugrave; Primary Navigation"
 
 #~ msgid "Change uploads folder?"
 #~ msgstr "Vuoi modificare la cartella per i caricamenti?"
