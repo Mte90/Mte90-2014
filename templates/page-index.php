@@ -99,7 +99,7 @@
 <div class="job col-sm-4">
   <h3>
     <i class="fa fa-comments"></i>
-    <a href="'http://codeat.it'">
+    <a href="http://codeat.it">
       <?php
         _e('My Job' , 'roots');
       ?>
