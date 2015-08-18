@@ -31,9 +31,6 @@
 </div>
 <header class="banner navbar navbar-default navbar-static-top" role="banner">
   <div class="container-fluid">
-    <a href="<?php echo get_site_url(); ?>">
-      <div class="avatar"></div>
-    </a>
     <div class="slogan">
       Daniele "Mte90" Scasciafratte - 
       <ul>
@@ -53,10 +50,13 @@
           <?php _e("Serious Comics Collector", 'roots'); ?>
         </li>
         <li>
-          <?php _e("Mozilla Contributor", 'roots'); ?>
+          <?php _e("Mozilla Reps", 'roots'); ?>
         </li>
         <li>
           <?php _e("KDE/Qt Addicted", 'roots'); ?>
+        </li>
+        <li>
+          <?php _e("Speaker - mte90.github.io", 'roots'); ?>
         </li>
       </ul>
     </div>
