@@ -1,9 +1,9 @@
-%header.banner.container(role="banner")
+%header.banner.container
 	%div.row
 		%div.col-lg-12
 			%a.brand(href="<?php echo home_url('/') ?>")
 				<?php bloginfo('name'); ?>
-			%nav.nav-main(role="navigation")
+			%nav.nav-main
 				:php
 					if (has_nav_menu('primary_navigation')) {
 						wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav nav-pills'));

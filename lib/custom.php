@@ -5,7 +5,7 @@
  */
 add_action( 'wp_enqueue_scripts', function() {
 	wp_deregister_style( 'font-awesome-four' );
-	wp_enqueue_style( 'font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css' );
+	wp_enqueue_style( 'font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' );
 
 	wp_localize_script( 'roots_scripts', 'template', array( 'path' => get_template_directory_uri() ) );
 }, 200 );
@@ -52,37 +52,35 @@ function cmb_metaboxes( array $meta_boxes ) {
 	$prefix = '_cmb_';
 
 	$meta_boxes[ 'mte_metabox' ] = array(
-		'id' => 'mte_metabox',
-		'title' => __( 'Video', 'cmb' ),
-		'pages' => array( 'post', ), // Post type
-		'context' => 'normal',
-		'priority' => 'high',
-		'show_names' => true, // Show field names on the left
-		'fields' => array(
-			array(
-				'name' => __( 'Video', 'cmb' ),
-				'desc' => __( '', 'cmb' ),
-				'id' => $prefix . 'video',
-				'type' => 'text_url',
-			),
-		)
+	    'id' => 'mte_metabox',
+	    'title' => __( 'Video', 'cmb' ),
+	    'pages' => array( 'post', ), // Post type
+	    'context' => 'normal',
+	    'priority' => 'high',
+	    'show_names' => true, // Show field names on the left
+	    'fields' => array(
+		array(
+		    'name' => __( 'Video', 'cmb' ),
+		    'id' => $prefix . 'video',
+		    'type' => 'text_url',
+		),
+	    )
 	);
 
 	$meta_boxes[ 'mte_gp_metabox' ] = array(
-		'id' => 'mte_gp_metabox',
-		'title' => __( 'Link', 'cmb' ),
-		'pages' => array( 'guest_post', ), // Post type
-		'context' => 'normal',
-		'priority' => 'high',
-		'show_names' => true, // Show field names on the left
-		'fields' => array(
-			array(
-				'name' => __( 'Link', 'cmb' ),
-				'desc' => __( '', 'cmb' ),
-				'id' => $prefix . 'gp_link',
-				'type' => 'text_url',
-			),
-		)
+	    'id' => 'mte_gp_metabox',
+	    'title' => __( 'Link', 'cmb' ),
+	    'pages' => array( 'guest_post', ), // Post type
+	    'context' => 'normal',
+	    'priority' => 'high',
+	    'show_names' => true, // Show field names on the left
+	    'fields' => array(
+		array(
+		    'name' => __( 'Link', 'cmb' ),
+		    'id' => $prefix . 'gp_link',
+		    'type' => 'text_url',
+		),
+	    )
 	);
 
 	return $meta_boxes;
@@ -92,9 +90,9 @@ class YT_Widget extends WP_Widget {
 
 	function __construct() {
 		parent::__construct(
-				'yt_widget', // Base ID
-				__( 'Youtube Box', 'roots' ), // Name
-				array( 'description' => __( 'Youtube Float Post', 'roots' ), ) // Args
+			'yt_widget', // Base ID
+			__( 'Youtube Box', 'roots' ), // Name
+			array( 'description' => __( 'Youtube Float Post', 'roots' ), ) // Args
 		);
 	}
 
@@ -149,84 +147,42 @@ function oembed_dimensions( $html, $url, $args ) {
 // end example_custom_oembed_dimensions
 add_filter( 'embed_oembed_html', 'oembed_dimensions', 10, 3 );
 
-// Register Custom Post Type
-function projects() {
-
-	$labels = array(
-		'name' => _x( 'Projects', 'Projects General Name', 'roots' ),
-		'singular_name' => _x( 'Projects', 'Projects Singular Name', 'roots' ),
-		'menu_name' => __( 'Projects', 'roots' ),
-		'parent_item_colon' => __( 'Parent Item:', 'roots' ),
-		'all_items' => __( 'All Items', 'roots' ),
-		'view_item' => __( 'View Item', 'roots' ),
-		'add_new_item' => __( 'Add New Item', 'roots' ),
-		'add_new' => __( 'Add New', 'roots' ),
-		'edit_item' => __( 'Edit Item', 'roots' ),
-		'update_item' => __( 'Update Item', 'roots' ),
-		'search_items' => __( 'Search Item', 'roots' ),
-		'not_found' => __( 'Not found', 'roots' ),
-		'not_found_in_trash' => __( 'Not found in Trash', 'roots' ),
-	);
-	$args = array(
-		'label' => __( 'projects', 'roots' ),
-		'description' => __( 'Projects', 'roots' ),
-		'labels' => $labels,
-		'supports' => array( 'title', 'editor' ),
-		'taxonomies' => array( 'category' ),
-		'hierarchical' => false,
-		'public' => true,
-		'show_ui' => true,
-		'show_in_menu' => true,
-		'show_in_nav_menus' => true,
-		'show_in_admin_bar' => true,
-		'menu_position' => 10,
-		'can_export' => true,
-		'has_archive' => true,
-		'exclude_from_search' => false,
-		'publicly_queryable' => true,
-		'capability_type' => 'page',
-	);
-	register_post_type( 'projects', $args );
-}
-
-// Hook into the 'init' action
-add_action( 'init', 'projects', 0 );
-
 function guest_post() {
 
 	$labels = array(
-		'name' => _x( 'Guest Posts', 'Post Type General Name', 'roots' ),
-		'singular_name' => _x( 'Guest Post', 'Post Type Singular Name', 'roots' ),
-		'menu_name' => __( 'Guest Post', 'roots' ),
-		'parent_item_colon' => __( 'Parent Item:', 'roots' ),
-		'all_items' => __( 'All Items', 'roots' ),
-		'view_item' => __( 'View Item', 'roots' ),
-		'add_new_item' => __( 'Add New Item', 'roots' ),
-		'add_new' => __( 'Add New', 'roots' ),
-		'edit_item' => __( 'Edit Item', 'roots' ),
-		'update_item' => __( 'Update Item', 'roots' ),
-		'search_items' => __( 'Search Item', 'roots' ),
-		'not_found' => __( 'Not found', 'roots' ),
-		'not_found_in_trash' => __( 'Not found in Trash', 'roots' ),
+	    'name' => _x( 'Guest Posts', 'Post Type General Name', 'roots' ),
+	    'singular_name' => _x( 'Guest Post', 'Post Type Singular Name', 'roots' ),
+	    'menu_name' => __( 'Guest Post', 'roots' ),
+	    'parent_item_colon' => __( 'Parent Item:', 'roots' ),
+	    'all_items' => __( 'All Items', 'roots' ),
+	    'view_item' => __( 'View Item', 'roots' ),
+	    'add_new_item' => __( 'Add New Item', 'roots' ),
+	    'add_new' => __( 'Add New', 'roots' ),
+	    'edit_item' => __( 'Edit Item', 'roots' ),
+	    'update_item' => __( 'Update Item', 'roots' ),
+	    'search_items' => __( 'Search Item', 'roots' ),
+	    'not_found' => __( 'Not found', 'roots' ),
+	    'not_found_in_trash' => __( 'Not found in Trash', 'roots' ),
 	);
 	$args = array(
-		'label' => __( 'guest_post', 'roots' ),
-		'description' => __( 'Guest Post', 'roots' ),
-		'labels' => $labels,
-		'supports' => array( 'title', ),
-		'taxonomies' => array( 'category' ),
-		'hierarchical' => false,
-		'public' => true,
-		'show_ui' => true,
-		'show_in_menu' => true,
-		'show_in_nav_menus' => true,
-		'show_in_admin_bar' => true,
-		'menu_position' => 11,
-		'can_export' => true,
-		'has_archive' => true,
-		'exclude_from_search' => false,
-		'publicly_queryable' => true,
-		'capability_type' => 'page',
+	    'label' => __( 'guest_post', 'roots' ),
+	    'description' => __( 'Guest Post', 'roots' ),
+	    'labels' => $labels,
+	    'supports' => array( 'title', ),
+	    'taxonomies' => array( 'category' ),
+	    'hierarchical' => false,
+	    'public' => true,
+	    'show_ui' => true,
+	    'show_in_menu' => true,
+	    'show_in_nav_menus' => true,
+	    'show_in_admin_bar' => true,
+	    'menu_position' => 11,
+	    'can_export' => true,
+	    'has_archive' => true,
+	    'exclude_from_search' => false,
+	    'publicly_queryable' => true,
+	    'capability_type' => 'page',
+	    'rewrite' => array( 'slug' => 'guest-post' )
 	);
 	register_post_type( 'guest_post', $args );
 }
@@ -239,6 +195,16 @@ function append_query_string( $url ) {
 		return get_post_meta( get_the_ID(), '_cmb_gp_link', true );
 	} else {
 		return $url;
+	}
+}
+
+add_action( 'wp_head', 'guest_redirect' );
+
+function guest_redirect() {
+	$url = append_query_string( '' );
+	if ( !empty( $url ) ) {
+		wp_redirect( $url, 301 );
+		exit;
 	}
 }
 
@@ -269,16 +235,12 @@ add_action( 'wp_enqueue_scripts', function() {
 		wp_deregister_script( 'quicktags-min' );
 		wp_dequeue_style( 'ceceppaml-flags' );
 		wp_deregister_style( 'ceceppaml-flags' );
-		wp_dequeue_style( 'xagithub_css' );
-		wp_deregister_style( 'xagithub_css' );
 		wp_dequeue_style( 'github-oembed' );
 		wp_deregister_style( 'github-oembed' );
 	}
 	if ( is_front_page() || is_archive() ) {
 		wp_dequeue_style( 'crayon' );
 		wp_deregister_style( 'crayon' );
-		wp_dequeue_style( 'xagithub_css' );
-		wp_deregister_style( 'xagithub_css' );
 		wp_dequeue_style( 'dlm-page-addon-frontend' );
 		wp_deregister_style( 'dlm-page-addon-frontend' );
 		wp_dequeue_script( 'crayon_js' );

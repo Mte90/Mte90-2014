@@ -19,9 +19,6 @@
       <a class="pulse-shrink social-youtube" href="http://www.youtube.com/user/Mte90lp" target="_blank"></a>
     </li>
     <li>
-      <a class="pulse-shrink social-foursquare" href="http://it.foursquare.com/mte90net" target="_blank"></a>
-    </li>
-    <li>
       <a class="pulse-shrink social-mozillians" href="https://mozillians.org/u/Mte90/" target="_blank"></a>
     </li>
     <li>

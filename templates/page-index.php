@@ -77,14 +77,14 @@
   </h3>
   <span>
     <?php
-      _e('I am a web developer and lover of open source.' , 'roots');
+      _e('I am an open source enthusiast' , 'roots');
     ?>
   </span>
 </div>
 <div class="hobby col-sm-4">
   <h3>
-    <i class="fa fa-paper-plane"></i>
-    <a href="<?php echo get_site_url().'/projects/'; ?>">
+    <i class="fa fa-github-square"></i>
+    <a href="http://github.com/Mte90">
       <?php
         _e('My project' , 'roots');
       ?>
