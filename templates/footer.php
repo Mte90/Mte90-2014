@@ -2,7 +2,7 @@
   <div class="container">
     <p id="copy">
       &copy;
-      <?php echo '2008/'.date('Y').' - '.get_bloginfo('name'); ?>
+      <?php echo '2008/'.date('Y').' - '.get_bloginfo('name').' - Click Me!'; ?>
     </p>
   </div>
 </footer>

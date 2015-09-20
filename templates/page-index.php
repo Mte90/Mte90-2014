@@ -135,7 +135,7 @@
       endwhile;
     ?>
     <li class="second-block">
-      <a href="<?php echo get_site_url().'/guest_post/'; ?>" class="hover"><?php _e('Archive', 'roots'); ?></a>
+      <a href="<?php echo get_site_url().'/guest-post/'; ?>" class="hover"><?php _e('Archive', 'roots'); ?></a>
     </li>
   </ul>
 </div>

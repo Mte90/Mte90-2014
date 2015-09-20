@@ -201,10 +201,12 @@ function append_query_string( $url ) {
 add_action( 'wp_head', 'guest_redirect' );
 
 function guest_redirect() {
-	$url = append_query_string( '' );
-	if ( !empty( $url ) ) {
-		wp_redirect( $url, 301 );
-		exit;
+	if ( is_single() ) {
+		$url = append_query_string( '' );
+		if ( !empty( $url ) ) {
+			wp_redirect( $url, 301 );
+			exit;
+		}
 	}
 }
 
