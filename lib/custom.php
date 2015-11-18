@@ -271,3 +271,36 @@ function feed_request( $qv ) {
 }
 
 add_filter( 'request', 'feed_request' );
+
+remove_shortcode('wp_caption', 'img_caption_shortcode');
+remove_shortcode('caption', 'img_caption_shortcode');
+add_shortcode('wp_caption', 'img_caption_shortcode_width');
+add_shortcode('caption', 'img_caption_shortcode_width');
+
+function img_caption_shortcode_width( $attr, $content = null ) {
+	// New-style shortcode with the caption inside the shortcode with the link and image tags.
+	if ( ! isset( $attr['caption'] ) ) {
+		if ( preg_match( '#((?:<a [^>]+>\s*)?<img [^>]+>(?:\s*</a>)?)(.*)#is', $content, $matches ) ) {
+			$content = $matches[1];
+			$attr['caption'] = trim( $matches[2] );
+		}
+	} elseif ( strpos( $attr['caption'], '<' ) !== false ) {
+		$attr['caption'] = wp_kses( $attr['caption'], 'post' );
+	}
+
+	$atts = shortcode_atts( array(
+		'id'	  => '',
+		'align'	  => 'alignnone',
+		'width'	  => '',
+		'caption' => '',
+		'class'   => '',
+	), $attr, 'caption' );
+
+	if ( ! empty( $atts['id'] ) )
+		$atts['id'] = 'id="' . esc_attr( sanitize_html_class( $atts['id'] ) ) . '" ';
+
+	$class = trim( 'wp-caption ' . $atts['align'] . ' ' . $atts['class'] );
+
+        return '<figure ' . $atts['id'] . ' class="' . esc_attr( $class ) . '">'
+		. do_shortcode( $content ) . '<figcaption class="wp-caption-text">' . $atts['caption'] . '</figcaption></figure>';
+}
