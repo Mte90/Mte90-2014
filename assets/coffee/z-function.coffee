@@ -7,6 +7,12 @@ jQuery.fn.prevOrLast = (selector) ->
 	prev = @prev(selector)
 	(if (prev.length) then prev else @nextAll(selector).last())
 	
+video_mobile = ->
+	if jQuery(window).width() < 769
+		jQuery('.fixed_box').removeClass('affix')
+		jQuery('.widget_yt_widget .fixed_box').width(jQuery('.widget').parent().width() + 30)
+		jQuery('.widget_yt_widget').detach().appendTo('.entry-content')
+	
 #http://thecodeplayer.com/walkthrough/matrix-rain-animation-html5-canvas-javascript
 spinner = ->
 	o = document.querySelector(".c")
