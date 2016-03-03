@@ -35,17 +35,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    coffee: {
-      compile: {
-        options: {
-          sourceMap: true,
-          join: true
-        },
-        files: {
-          'assets/js/_script.js': ['assets/coffee/*.coffee'] // concat then compile into single file
-        }
-      }
-    },
     jshint: {
       options: {
         jshintrc: '.jshintrc'
@@ -148,7 +137,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-haml-php');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
@@ -158,7 +146,6 @@ module.exports = function(grunt) {
   grunt.registerTask('default', [
     'clean',
     'compass',
-    'coffee',
     'haml',
     'uglify',
     'version'
