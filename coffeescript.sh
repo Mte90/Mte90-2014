@@ -8,7 +8,7 @@ while inotifywait -rq -e create -e modify,attrib,move,create,delete assets/coffe
     coffee -bcm -o assets/js assets/js/script.coffee
     rm assets/js/script.coffee
     tmp=$(cat assets/js/script.js) 
-    echo -e "jQuery.ready(function(){\n$tmp\n});\n" > assets/js/script.js
+    #echo -e "jQuery.ready(function(){\n$tmp\n});\n" > assets/js/script.js
     SIZE2=$(stat -c "%s" "assets/js/script.js")
     PERC=$(bc <<< "scale=2; ($SIZE2 - $SIZE1)/$SIZE1 * 100")
     echo "  Compiled Diff: $PERC%"

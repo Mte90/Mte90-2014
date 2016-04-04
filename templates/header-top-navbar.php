@@ -29,7 +29,7 @@
 <header class="banner navbar navbar-default navbar-static-top" role="banner">
   <div class="container-fluid">
     <div class="slogan">
-      Daniele "Mte90" Scasciafratte - 
+      Daniele "Mte90" Scasciafratte -
       <ul>
         <li>
           <?php _e("The Eternauta Geek", 'roots'); ?>

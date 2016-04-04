@@ -2,7 +2,7 @@
   /*
   Template Name: Home Page
   */
-  
+
 ?>
 <!-- First block -->
 <div class="news col-sm-6">
@@ -10,14 +10,14 @@
   <ul class="box-carousel">
     <?php
       $first = true;
-      $the_query = new WP_Query('showposts=6&orderby=date&order=DESC&cat=-32'); 
+      $the_query = new WP_Query('showposts=6&orderby=date&order=DESC&cat=-32');
       while ($the_query -> have_posts()) : $the_query -> the_post();
       if($first) {
       	$show = '';
       	$first = false;
       } else {
       	$show = 'second';
-      } 
+      }
     ?>
     <li class="<?php echo $show; ?>">
       <?php echo cml_show_flags(array('only_existings' => true)); ?>
@@ -25,7 +25,7 @@
       <?php
         get_template_part('templates/entry-meta');
         $metadesc = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true);
-        if (!empty($metadesc)) { echo '<p>'.$metadesc.'</p>'; } 
+        if (!empty($metadesc)) { echo '<p>'.$metadesc.'</p>'; }
         else { the_excerpt(); }
       ?>
     </li>
@@ -40,8 +40,8 @@
   <ul class="box-carousel">
     <?php
       $first = true;
-      $the_query = new WP_Query('showposts=6&orderby=date&order=DESC&category_name=video'); 
-      while ($the_query -> have_posts()) : $the_query -> the_post(); 
+      $the_query = new WP_Query('showposts=6&orderby=date&order=DESC&category_name=video');
+      while ($the_query -> have_posts()) : $the_query -> the_post();
       if($first) {
       	$show = '';
       	$first = false;
@@ -55,7 +55,7 @@
       <?php
         get_template_part('templates/entry-meta');
         $metadesc = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true);
-        if (!empty($metadesc)) { echo '<p>'.$metadesc.'</p>'; } 
+        if (!empty($metadesc)) { echo '<p>'.$metadesc.'</p>'; }
         else { the_excerpt(); }
       ?>
     </li>
@@ -108,7 +108,7 @@
   <span>
     <?php
       _e('I, my passions and my work' , 'roots');
-      
+
     ?>
   </span>
 </div>
@@ -119,8 +119,8 @@
   <ul>
     <?php
       $i = 0;
-      $the_query = new WP_Query('showposts=5&orderby=date&order=DESC&post_type=guest_post'); 
-      while ($the_query -> have_posts()) : $the_query -> the_post(); 
+      $the_query = new WP_Query('showposts=5&orderby=date&order=DESC&post_type=guest_post');
+      while ($the_query -> have_posts()) : $the_query -> the_post();
       $i++;
       if($i < 4) {
       	$block = 'first-block';
@@ -135,7 +135,7 @@
       endwhile;
     ?>
     <li class="second-block">
-      <a href="<?php echo get_site_url().'/guest-post/'; ?>" class="hover"><?php _e('Archive', 'roots'); ?></a>
+      <a href="<?php echo get_site_url().'/guest_post/'; ?>" class="hover"><?php _e('Archive', 'roots'); ?></a>
     </li>
   </ul>
 </div>

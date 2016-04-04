@@ -10,7 +10,7 @@
 <div class="entry-summary">
   <?php
     $metadesc = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true);
-    if (!empty($metadesc)) { echo $metadesc; } 
+    if (!empty($metadesc)) { echo $metadesc; }
     else { the_excerpt(); }
   ?>
 </div>

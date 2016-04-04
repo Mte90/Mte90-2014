@@ -8,6 +8,6 @@
 <span class="cat">
   <?php
     echo ' - '.get_the_category_list( __( ', ', 'roots' ) )
-    
+
   ?>
 </span>

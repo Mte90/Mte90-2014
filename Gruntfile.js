@@ -1,15 +1,15 @@
 'use strict';
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
   grunt.initConfig({
     haml: {
       compile: {
         files: [{
-          expand: true,
-          src: ['assets/haml/*.haml'],
-          dest: 'templates/',
-          ext: '.php'
-        }]
+            expand: true,
+            src: ['assets/haml/*.haml'],
+            dest: 'templates/',
+            ext: '.php'
+          }]
       }
     },
     compass: {
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
       all: [
         'Gruntfile.js',
         'assets/js/*.js',
-        '!assets/js/scripts.min.js'
+        '!assets/js/script.min.js'
       ]
     },
     imagemin: {
@@ -70,7 +70,6 @@ module.exports = function(grunt) {
             'assets/js/plugins/bootstrap/bootbox.js',
             'assets/js/vendor/flowtype-1.1.js',
             'assets/js/vendor/jquery.backstretch.js',
-            'assets/js/_*.js'
           ]
         }
       }
@@ -80,8 +79,8 @@ module.exports = function(grunt) {
         file: 'lib/scripts.php',
         css: 'assets/css/app.css',
         cssHandle: 'roots_main',
-        js: 'assets/js/scripts.min.js',
-        jsHandle: 'roots_scripts'
+        js: 'assets/js/script.js',
+        jsHandle: 'theme_scripts'
       }
     },
     watch: {
@@ -100,7 +99,7 @@ module.exports = function(grunt) {
         options: {
           sourceMap: true,
           join: true
-		},
+        },
         files: 'assets/coffee/*.coffee',
         tasks: ['coffee']
       },
@@ -118,7 +117,7 @@ module.exports = function(grunt) {
         },
         files: [
           'assets/css/app.css',
-          'assets/js/scripts.js',
+          'assets/js/script.js',
           'templates/*.php',
           '*.php'
         ]
@@ -127,7 +126,7 @@ module.exports = function(grunt) {
     clean: {
       dist: [
         'assets/css/app.css',
-        'assets/js/scripts.min.js'
+        'assets/js/script.min.js'
       ]
     }
   });
