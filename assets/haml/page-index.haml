@@ -18,7 +18,7 @@
 				$show = 'second';
 			} 
 		%li(class="<?php echo $show; ?>")
-			<?php echo cml_show_flags(array('only_existings' => true)); ?>
+			<?php echo cml_show_flags(array('only_existings' => true, 'queried' => false)); ?>
 			<a href="<?php the_permalink() ?>" class="float-hover"><?php echo $post->post_title; ?></a>
 			:php
 				get_template_part('templates/entry-meta');
@@ -43,7 +43,7 @@
 				$show = 'second';
 			}
 		%li(class="<?php echo $show; ?>")
-			<?php echo cml_show_flags(array('only_existings' => true)); ?>
+			<?php echo cml_show_flags(array('only_existings' => true, 'queried' => false)); ?>
 			<a href="<?php the_permalink() ?>" class="float-hover"><?php echo $post->post_title; ?></a>
 			:php
 				get_template_part('templates/entry-meta');
