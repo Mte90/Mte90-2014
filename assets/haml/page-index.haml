@@ -9,7 +9,7 @@
 	%ul.box-carousel
 		:php
 			$first = true;
-			$the_query = new WP_Query('showposts=6&orderby=date&order=DESC&cat=-32'); 
+			$the_query = new WP_Query('showposts=6&orderby=date&order=DESC&cat=-31'); 
 			while ($the_query -> have_posts()) : $the_query -> the_post();
 			if($first) {
 				$show = '';
@@ -34,7 +34,7 @@
 	%ul.box-carousel
 		:php
 			$first = true;
-			$the_query = new WP_Query('showposts=6&orderby=date&order=DESC&category_name=video'); 
+			$the_query = new WP_Query('showposts=6&orderby=date&order=DESC&cat=31'); 
 			while ($the_query -> have_posts()) : $the_query -> the_post(); 
 			if($first) {
 				$show = '';
