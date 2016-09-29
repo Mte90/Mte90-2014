@@ -84,7 +84,7 @@
 <div class="hobby col-sm-4">
   <h3>
     <i class="fa fa-github-square"></i>
-    <a href="http://github.com/Mte90">
+    <a href="https://github.com/Mte90">
       <?php
         _e('My project' , 'roots');
       ?>
@@ -135,7 +135,7 @@
       endwhile;
     ?>
     <li class="second-block">
-      <a href="<?php echo get_site_url().'/guest_post/'; ?>" class="hover"><?php _e('Archive', 'roots'); ?></a>
+      <a href="<?php echo get_site_url().'/guest-post/'; ?>" class="hover"><?php _e('Archive', 'roots'); ?></a>
     </li>
   </ul>
 </div>

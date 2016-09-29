@@ -130,28 +130,6 @@ body.modal-open {
     }
     margin:0;
 }
-/*
-.avatar {
-    width: 100px;
-    height: 100px;
-    float:left;
-    @include animation(avatarsprite 30s linear backwards infinite);
-    background: sprite-map("avatar/*.png", $layout: smart);
-    &:hover {
-        animation-play-state: paused;
-    }
-}
-
-@-webkit-keyframes avatarsprite {
-    from { background-position: 0px; }
-    to { background-position: 50% 800px; }
-}
-
-@keyframes avatarsprite {
-    0% { background-position: 0px; }
-    50% { background-position: 50% 800px; }
-    100% { background-position: 0px; }
-}*/
 
 .slogan {
     height:50px;
@@ -407,7 +385,7 @@ body.modal-open {
     }
     .entry-title {
         text-shadow: 0px 1px 1px #000;
-        font-weight: normal !important
+        font-weight: normal !important;
     }
     h1 {
         text-shadow: 0px 1px 1px #000;
@@ -471,6 +449,18 @@ body.modal-open {
 
 .entry-content-asset {
     margin:0 auto !important;
+    height: 0;
+    position: relative;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 50%;
+    iframe {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
     a {
         &:hover,&:active {
             transform: none !important;
@@ -503,6 +493,7 @@ body.modal-open {
         margin-bottom: 9px;
         h1 {
             margin-top: 10px;
+            margin-left: 10px;
         }
     }
 }
@@ -516,8 +507,6 @@ body.modal-open {
         font-weight: bold;
         text-shadow:0px 0px 4px #000;
         @include skew();
-        top: -1px;
-        position: relative;
     }
     .addthis_toolbox {
         padding-top: 3px;
@@ -781,35 +770,6 @@ li.github-repo-contributor {
             width:100%;
         }
     }
-}
-
-ul.xagithub {
-    padding-left: 20px;
-}
-ul.xagithub li {
-    list-style-image: url(http://mte90.net/wp-content/plugins/WP-Xagithub-Activity/images/github.png);
-    padding: 5pt 0 5pt 0;
-}
-ul.xagithub li:first-child { padding-top: 0; }
-ul.xagithub li:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-ul.xagithub li em {
-    display:none;
-}
-ul.xagithub li a {
-    vertical-align: text-bottom;
-    word-break: break-word;
-}
-ul.xagithub li span {
-    color: white;
-    vertical-align: text-bottom;
-    padding: 2pt 5pt 2pt 5pt;
-    background-color: rgba(10,10,10,0.1);
-}
-ul.xagithub li em {
-    padding-right: 5pt;
 }
 
 .widget_search {

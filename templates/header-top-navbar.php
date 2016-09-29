@@ -1,10 +1,10 @@
 <div class="social">
   <ul>
     <li>
-      <a class="pulse-shrink social-facebook" href="http://www.facebook.com/Mte90" target="_blank" data-text="<?php _e("I don't add people that don't know, so put up else I will not accept your request!", 'roots') ?>"></a>
+      <a class="pulse-shrink social-facebook" href="https://www.facebook.com/Mte90" target="_blank" data-text="<?php _e("I don't add people that don't know, so put up else I will not accept your request!", 'roots') ?>"></a>
     </li>
     <li>
-      <a class="pulse-shrink social-twitter" href="http://twitter.com/Mte90Net" target="_blank"></a>
+      <a class="pulse-shrink social-twitter" href="https://twitter.com/Mte90Net" target="_blank"></a>
     </li>
     <li>
       <a class="pulse-shrink social-google" href="https://plus.google.com/u/0/+DanieleScasciafratteMte90Net/" target="_blank"></a>
@@ -13,16 +13,16 @@
       <a class="pulse-shrink social-github" href="https://github.com/Mte90"></a>
     </li>
     <li>
-      <a class="pulse-shrink social-linkedin" href="http://it.linkedin.com/pub/daniele-scasciafratte/49/b97/33/" target="_blank" data-text="<?php _e("I don't add people that don't know, so put up else I will not accept your request!", 'roots') ?>"></a>
+      <a class="pulse-shrink social-linkedin" href="https://www.linkedin.com/in/danielescasciafratte" target="_blank" data-text="<?php _e("I don't add people that don't know, so put up else I will not accept your request!", 'roots') ?>"></a>
     </li>
     <li>
-      <a class="pulse-shrink social-youtube" href="http://www.youtube.com/user/Mte90lp" target="_blank"></a>
+      <a class="pulse-shrink social-youtube" href="https://www.youtube.com/user/Mte90lp" target="_blank"></a>
     </li>
     <li>
       <a class="pulse-shrink social-mozillians" href="https://mozillians.org/u/Mte90/" target="_blank"></a>
     </li>
     <li>
-      <a class="pulse-shrink social-feed" href="<?php echo home_url() . '/feed' ?>" target="_blank" data-text="This site is multilanguage (Italian and English) pick your feed:<br><br><b>Italian - http://mte90.net/feed/</b><br><b>English - http://mte90.net/en/feed/</b>"></a>
+      <a class="pulse-shrink social-feed" href="<?php echo home_url() . '/feed' ?>" target="_blank" data-text="This site is multilanguage (Italian and English) pick your feed:<br><br><b>Italian - https://mte90.net/feed/</b><br><b>English - https://mte90.net/en/feed/</b>"></a>
     </li>
   </ul>
 </div>
@@ -35,7 +35,7 @@
           <?php _e("The Eternauta Geek", 'roots'); ?>
         </li>
         <li>
-          <?php _e("Wordpress Coder", 'roots'); ?>
+          <?php _e("Wordpress Core Contributor", 'roots'); ?>
         </li>
         <li>
           <?php _e("Debian Sid User", 'roots'); ?>
@@ -53,7 +53,7 @@
           <?php _e("KDE/Qt Addicted", 'roots'); ?>
         </li>
         <li>
-          <?php _e("Speaker - mte90.github.io", 'roots'); ?>
+          <?php _e("Tech Open Source Speaker", 'roots'); ?>
         </li>
       </ul>
     </div>
@@ -62,6 +62,7 @@
         if (has_nav_menu('primary_navigation')) {
         	wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav', 'walker' => new Roots_Nav_Walker()));
         }
+        
       ?>
     </nav>
   </div>

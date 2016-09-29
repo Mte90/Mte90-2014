@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Roots\n"
-"POT-Creation-Date: 2015-09-20 14:50+0200\n"
-"PO-Revision-Date: 2015-09-20 14:50+0200\n"
+"POT-Creation-Date: 2016-08-21 16:16+0200\n"
+"PO-Revision-Date: 2016-08-21 16:17+0200\n"
 "Last-Translator: Mte90 <mte90net@gmail.com>\n"
 "Language-Team: it <kde-i18n-it@kde.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 1.8.8\n"
 "Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_n;_x;esc_html_e;esc_html__;esc_attr_e;"
@@ -153,8 +153,9 @@ msgid "Video"
 msgstr "Video"
 
 #: lib/custom.php:72 lib/custom.php:79
+#, fuzzy
 msgid "Link"
-msgstr ""
+msgstr "Link No Follow"
 
 #: lib/custom.php:94
 msgid "Youtube Box"
@@ -164,82 +165,62 @@ msgstr ""
 msgid "Youtube Float Post"
 msgstr ""
 
-#: lib/custom.php:154
-msgctxt "Projects General Name"
-msgid "Projects"
-msgstr "Progetti"
-
-#: lib/custom.php:155
-msgctxt "Projects Singular Name"
-msgid "Projects"
-msgstr "Progetti"
-
-#: lib/custom.php:156 lib/custom.php:170
-msgid "Projects"
-msgstr "Progetti"
-
-#: lib/custom.php:157 lib/custom.php:199
-msgid "Parent Item:"
-msgstr ""
-
-#: lib/custom.php:158 lib/custom.php:200
-msgid "All Items"
-msgstr ""
-
-#: lib/custom.php:159 lib/custom.php:201
-msgid "View Item"
-msgstr "Visualizza"
-
-#: lib/custom.php:160 lib/custom.php:202
-msgid "Add New Item"
-msgstr "Aggiungi"
-
-#: lib/custom.php:161 lib/custom.php:203
-msgid "Add New"
-msgstr "Aggiungi"
-
-#: lib/custom.php:162 lib/custom.php:204
-msgid "Edit Item"
-msgstr "Modifica"
-
-#: lib/custom.php:163 lib/custom.php:205
-msgid "Update Item"
-msgstr "Aggiorna"
-
-#: lib/custom.php:164 lib/custom.php:206
-msgid "Search Item"
-msgstr "Cerca"
-
-#: lib/custom.php:165 lib/custom.php:207
-msgid "Not found"
-msgstr "Non trovato"
-
-#: lib/custom.php:166 lib/custom.php:208
-#, fuzzy
-msgid "Not found in Trash"
-msgstr "Nessun %s trovato nel Cestino"
-
-#: lib/custom.php:169
-#, fuzzy
-msgid "projects"
-msgstr "Progetti"
-
-#: lib/custom.php:196
+#: lib/custom.php:153
 msgctxt "Post Type General Name"
 msgid "Guest Posts"
 msgstr "Guest Post"
 
-#: lib/custom.php:197
+#: lib/custom.php:154
 msgctxt "Post Type Singular Name"
 msgid "Guest Post"
 msgstr "Guest Post"
 
-#: lib/custom.php:198 lib/custom.php:212
+#: lib/custom.php:155 lib/custom.php:169
 msgid "Guest Post"
 msgstr "Guest Post"
 
-#: lib/custom.php:211
+#: lib/custom.php:156
+msgid "Parent Item:"
+msgstr ""
+
+#: lib/custom.php:157
+msgid "All Items"
+msgstr ""
+
+#: lib/custom.php:158
+msgid "View Item"
+msgstr "Visualizza"
+
+#: lib/custom.php:159
+msgid "Add New Item"
+msgstr "Aggiungi"
+
+#: lib/custom.php:160
+msgid "Add New"
+msgstr "Aggiungi"
+
+#: lib/custom.php:161
+msgid "Edit Item"
+msgstr "Modifica"
+
+#: lib/custom.php:162
+msgid "Update Item"
+msgstr "Aggiorna"
+
+#: lib/custom.php:163
+msgid "Search Item"
+msgstr "Cerca"
+
+#: lib/custom.php:164
+msgid "Not found"
+msgstr "Non trovato"
+
+#: lib/custom.php:165
 #, fuzzy
+msgid "Not found in Trash"
+msgstr "Nessun %s trovato nel Cestino"
+
+#: lib/custom.php:168
 msgid "guest_post"
 msgstr "Guest Post"
 
@@ -391,36 +372,36 @@ msgstr ""
 "Non aggiungo persone che non conosco, presentati altrimenti non accetterò la "
 "richiesta!"
 
-#: templates/header-top-navbar.php:38
+#: templates/header-top-navbar.php:35
 msgid "The Eternauta Geek"
 msgstr ""
 
-#: templates/header-top-navbar.php:41
-msgid "Wordpress Coder"
+#: templates/header-top-navbar.php:38
+msgid "Wordpress Core Contributor"
 msgstr ""
 
-#: templates/header-top-navbar.php:44
+#: templates/header-top-navbar.php:41
 msgid "Debian Sid User"
 msgstr ""
 
-#: templates/header-top-navbar.php:47
+#: templates/header-top-navbar.php:44
 msgid "Open Source Evangelist"
 msgstr ""
 
-#: templates/header-top-navbar.php:50
+#: templates/header-top-navbar.php:47
 msgid "Serious Comics Collector"
 msgstr ""
 
-#: templates/header-top-navbar.php:53
+#: templates/header-top-navbar.php:50
 msgid "Mozilla Reps"
 msgstr ""
 
-#: templates/header-top-navbar.php:56
+#: templates/header-top-navbar.php:53
 msgid "KDE/Qt Addicted"
 msgstr ""
 
-#: templates/header-top-navbar.php:59
-msgid "Speaker - mte90.github.io"
+#: templates/header-top-navbar.php:56
+msgid "Tech Open Source Speaker"
 msgstr ""
 
 #: templates/page-index.php:74
@@ -458,6 +439,21 @@ msgstr "Cerca"
 #: templates/searchform.php:4
 msgid "Search for:"
 msgstr "Cerca:"
+
+#~ msgctxt "Projects General Name"
+#~ msgid "Projects"
+#~ msgstr "Progetti"
+
+#~ msgctxt "Projects Singular Name"
+#~ msgid "Projects"
+#~ msgstr "Progetti"
+
+#~ msgid "Projects"
+#~ msgstr "Progetti"
+
+#, fuzzy
+#~ msgid "projects"
+#~ msgstr "Progetti"
 
 #~ msgid "I am a web developer and lover of open source."
 #~ msgstr "Sono uno sviluppatore e amante dell'open source."
