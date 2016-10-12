@@ -79,7 +79,7 @@ module.exports = function (grunt) {
         file: 'lib/scripts.php',
         css: 'assets/css/app.css',
         cssHandle: 'roots_main',
-        js: 'assets/js/script.js',
+        js: 'assets/js/scripts.min.js',
         jsHandle: 'theme_scripts'
       }
     },
@@ -117,7 +117,7 @@ module.exports = function (grunt) {
         },
         files: [
           'assets/css/app.css',
-          'assets/js/script.js',
+          'assets/js/scripts.min.js',
           'templates/*.php',
           '*.php'
         ]
@@ -126,7 +126,7 @@ module.exports = function (grunt) {
     clean: {
       dist: [
         'assets/css/app.css',
-        'assets/js/script.min.js'
+        'assets/js/scripts.min.js'
       ]
     }
   });

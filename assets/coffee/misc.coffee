@@ -21,7 +21,10 @@ video_mobile()
 jQuery(window).resize ->
   video_mobile()
 
-jQuery('a').has("img").css({transform: "none"})
-jQuery('.entry-content a').has("img").css({width: "100%"})
+jQuery('.main article .entry-content a').has("img").css({transform: "none", display: "block"})
 
 jQuery('.entry-content-asset').has(".github-embed").css('padding-bottom', "25%")
+
+jQuery('.main article .entry-content img').each (index) ->
+  if jQuery(this).attr('width') < 500
+    jQuery(this).css 'width': 'auto'
