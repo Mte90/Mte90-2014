@@ -10,6 +10,9 @@
   ?>
 </header>
 <div class="entry-content"><?php echo the_content(); ?></div>
+<div class="entry-license">
+  All the stuff released in this website, where the author is Daniele Scasciafratte, is under the GPL 2.0 license except when the resources have their licenses.
+</div>
 <footer><?php echo wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?></footer>
 <?php
   comments_template('/templates/comments.php');

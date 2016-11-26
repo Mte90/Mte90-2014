@@ -305,9 +305,11 @@ function img_caption_shortcode_width( $attr, $content = null ) {
 		. do_shortcode( $content ) . '<figcaption class="wp-caption-text">' . $atts['caption'] . '</figcaption></figure>';
 }
 
-add_filter( 'list_terms_exclusions', 'hide_specific_category', 10, 2 );
+if(is_admin()) {
+    add_filter( 'list_terms_exclusions', 'hide_specific_category', 10, 2 );
 
-function hide_specific_category($exclusions,$args){
-    $exclusions = " AND ( t.term_id NOT IN (21,42) )";
-    return $exclusions;
+    function hide_specific_category($exclusions,$args){
+        $exclusions = " AND ( t.term_id NOT IN (21,42,14,30) )";
+        return $exclusions;
+    }
 }

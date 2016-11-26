@@ -7,6 +7,8 @@
 	:php
 		get_template_part('templates/entry-meta');
 %div.entry-content= the_content()
+%div.entry-license
+	All the stuff released in this website, where the author is Daniele Scasciafratte, is under the GPL 2.0 license except when the resources have their licenses.
 %footer= wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>'))
 :php
 	comments_template('/templates/comments.php');

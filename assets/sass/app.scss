@@ -407,11 +407,6 @@ body.modal-open {
         @include skew();
         line-height: 30px;
     }
-    .entry-content {
-        a {
-            line-height: 13px;
-        }
-    }
     header {
         padding-left: 15px;
         padding-right: 15px;
@@ -428,12 +423,15 @@ body.modal-open {
             }
         }
     }
-    .entry-content {
+    .entry-content, .entry-license {
         padding: 0px 15px 15px;
         img {
             max-width:100%;
             height: auto;
             width:100%;
+        }
+        a {
+            line-height: 13px;
         }
     }
 }
@@ -453,7 +451,7 @@ body.modal-open {
     position: relative;
     width: 100%;
     padding-top: 30px;
-    padding-bottom: 50%;
+    padding-bottom: 80%;
     iframe {
         height: 100%;
         width: 100%;
@@ -527,8 +525,11 @@ body.modal-open {
         margin-left: 0px !important;
         margin-top: -10px !important;
     }
-    .entry-content {
+    .entry-content, .entry-license {
         padding: 0px 15px 15px;
+    }
+    .entry-license {
+        font-size: 12px;
     }
 }
 
@@ -811,67 +812,6 @@ li.github-repo-contributor {
 
 .widget_cececepml-chooser {
     margin-bottom: -10px;
-}
-
-/* ==========================================================================
-   Download Gallery
-   ========================================================================== */
-
-.download-gallery {
-    .main {
-        background: rgb(188, 1, 1);
-        background-color: rgba(188, 1, 1, 0.25);
-        a {
-            color:white;
-        }
-    }
-    #download-search {
-        display:none;
-    }
-    .download_group {
-        @include curl-top-right();
-        margin-right:1px !important;
-    }
-    .download-monitor-categories {
-        padding-top:6px;
-    }
-    .main {
-        article {
-            background:none;
-        }
-        .download-meta {
-            td {
-                min-width: 100px;
-            }
-            .value {
-                color:white;
-            }
-        }
-    }
-}
-
-/* ==========================================================================
-   Aeolus
-   ========================================================================== */
-
-.pageTitle, .pageSubtitle {
-    color:white;
-}
-
-.pageTitle {
-    margin:5px !important;
-}
-
-.portfolioSingleContent {
-    padding: 0px 15px 15px;
-}
-
-.rxPostContent {
-    margin: 20px 0px;
-}
-
-.rx_parallax a {
-    color:white;
 }
 
 /* ==========================================================================
