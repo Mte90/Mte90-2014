@@ -601,12 +601,6 @@ body.modal-open {
     @include skew();
 }
 
-.avatar-42 {
-    width: 42px !important;
-    height: 42px !important;
-    margin-right: 10px;
-}
-
 .comment-body {
     padding:10px;
     padding-bottom:5px;
@@ -875,10 +869,6 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 }
 
 @media (max-width: 614px) {
-
-    .avatar {
-        display:none;
-    }
 
     .menu a {
         padding-left:8px;
