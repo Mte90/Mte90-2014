@@ -5,6 +5,7 @@
 <article <?php post_class(); ?>>
 <header>
   <h1 class="entry-title"><?php echo the_title(); ?></h1>
+  <?php echo cml_show_flags(array('only_existings' => true, 'queried' => false)); ?>
   <?php
     get_template_part('templates/entry-meta');
   ?>

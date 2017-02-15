@@ -5,7 +5,7 @@
  */
 add_action( 'wp_enqueue_scripts', function() {
 	wp_deregister_style( 'font-awesome-four' );
-	wp_enqueue_style( 'font-awesome-four', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' );
+	wp_enqueue_style( 'font-awesome-four', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' );
 
 	wp_localize_script( 'roots_scripts', 'template', array( 'path' => get_template_directory_uri() ) );
 }, 200 );
@@ -243,8 +243,6 @@ add_action( 'wp_enqueue_scripts', function() {
 	if ( is_front_page() || is_archive() ) {
 		wp_dequeue_style( 'crayon' );
 		wp_deregister_style( 'crayon' );
-		wp_dequeue_style( 'dlm-page-addon-frontend' );
-		wp_deregister_style( 'dlm-page-addon-frontend' );
 		wp_dequeue_script( 'crayon_js' );
 		wp_deregister_script( 'crayon_js' );
 	}

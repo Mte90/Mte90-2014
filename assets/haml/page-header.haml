@@ -1,2 +1,4 @@
 %div.page-header.entry-title
 	%h1= roots_title()
+
+<?php if(is_page()) { echo cml_show_flags(array('only_existings' => true, 'queried' => false)); } ?>

@@ -11,11 +11,10 @@
 			$first = true;
 			$the_query = new WP_Query('showposts=6&orderby=date&order=DESC&cat=-31'); 
 			while ($the_query -> have_posts()) : $the_query -> the_post();
+			$show = 'second';
 			if($first) {
 				$show = '';
 				$first = false;
-			} else {
-				$show = 'second';
 			} 
 		%li(class="<?php echo $show; ?>")
 			<?php echo cml_show_flags(array('only_existings' => true, 'queried' => false)); ?>
@@ -36,12 +35,11 @@
 			$first = true;
 			$the_query = new WP_Query('showposts=6&orderby=date&order=DESC&cat=31'); 
 			while ($the_query -> have_posts()) : $the_query -> the_post(); 
+			$show = 'second';
 			if($first) {
 				$show = '';
 				$first = false;
-			} else {
-				$show = 'second';
-			}
+			} 
 		%li(class="<?php echo $show; ?>")
 			<?php echo cml_show_flags(array('only_existings' => true, 'queried' => false)); ?>
 			<a href="<?php the_permalink() ?>" class="float-hover"><?php echo $post->post_title; ?></a>
@@ -66,7 +64,7 @@
 			_e('I am an open source enthusiast' , 'roots');
 %div.hobby.col-sm-4
 	%h3
-		%i.fa.fa-github-square
+		%i.fa.fa-github
 		%a(href="https://github.com/Mte90")
 			:php
 				_e('My project' , 'roots');

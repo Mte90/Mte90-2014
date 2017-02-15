@@ -4,6 +4,7 @@
 <article <?php post_class(); ?>>
 %header
 	%h1.entry-title= the_title()
+	<?php echo cml_show_flags(array('only_existings' => true, 'queried' => false)); ?>
 	:php
 		get_template_part('templates/entry-meta');
 %div.entry-content= the_content()

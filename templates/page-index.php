@@ -12,11 +12,10 @@
       $first = true;
       $the_query = new WP_Query('showposts=6&orderby=date&order=DESC&cat=-31'); 
       while ($the_query -> have_posts()) : $the_query -> the_post();
+      $show = 'second';
       if($first) {
       	$show = '';
       	$first = false;
-      } else {
-      	$show = 'second';
       } 
     ?>
     <li class="<?php echo $show; ?>">
@@ -42,12 +41,11 @@
       $first = true;
       $the_query = new WP_Query('showposts=6&orderby=date&order=DESC&cat=31'); 
       while ($the_query -> have_posts()) : $the_query -> the_post(); 
+      $show = 'second';
       if($first) {
       	$show = '';
       	$first = false;
-      } else {
-      	$show = 'second';
-      }
+      } 
     ?>
     <li class="<?php echo $show; ?>">
       <?php echo cml_show_flags(array('only_existings' => true, 'queried' => false)); ?>
@@ -83,7 +81,7 @@
 </div>
 <div class="hobby col-sm-4">
   <h3>
-    <i class="fa fa-github-square"></i>
+    <i class="fa fa-github"></i>
     <a href="https://github.com/Mte90">
       <?php
         _e('My project' , 'roots');

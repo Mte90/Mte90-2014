@@ -423,17 +423,17 @@ body.modal-open {
             }
         }
     }
-    .entry-content, .entry-license {
+}
+.entry-content, .entry-license {
         padding: 0px 15px 15px;
         img {
-            max-width:100%;
+            max-width:80%;
             height: auto;
-            width:100%;
+            margin:0 auto;
         }
         a {
             line-height: 13px;
         }
-    }
 }
 
 .wp-smiley {
@@ -443,7 +443,7 @@ body.modal-open {
 .entry-content-asset {
     margin:0 auto !important;
     position: relative;
-    width: 100%;
+    width: 80%;
     &.twitter twitterwidget {
         margin:0 auto;
     }
@@ -467,7 +467,8 @@ body.modal-open {
 }
 
 iframe.instagram-media {
-    max-width: initial !important;
+    max-width: 80% !important;
+    margin: 0 auto !important;
 }
 
 .home, .archive,.single,.blog,.page,.error404 {
@@ -477,10 +478,17 @@ iframe.instagram-media {
         text-shadow: 0px 1px 1px #000;
         margin: 0px -15px !important;
         word-break:break-all;
+        h1 {
+            margin-left: 4px;
+        }
     }
     .main, .content, .wrap {
         padding: 0px !important;
     }
+}
+
+.single h1.entry-title {
+    padding-left: 4px;
 }
 
 .page-header .entry-title {
@@ -550,17 +558,6 @@ iframe.instagram-media {
         ul {
             margin-top: 10px;
         }
-    }
-}
-
-.sidebar {
-    background:black;
-    background-color: rgba(0, 0, 0, 0.8);
-    color:white;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    a {
-        color: #177BA5;
     }
 }
 
@@ -658,7 +655,7 @@ iframe.instagram-media {
 /* Gallery Shortcode */
 .gallery-row { padding: 15px 0; }
 
-.cml-flag-tiny-it:before {
+.cml-flag-tiny-it:before, .cml-flag-tiny-en:before {
     content: url(http://mte90.net/wp-content/plugins/ceceppa-multilingua/flags/tiny/it_IT.png);
     width: 16px;
     height: 11px;
@@ -668,13 +665,8 @@ iframe.instagram-media {
 }
 .cml-flag-tiny-en:before {
     content: url(http://mte90.net/wp-content/plugins/ceceppa-multilingua/flags/tiny/en_GB.png);
-    width: 16px;
-    height: 11px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 5px;
 }
-.cml-flag-small-it:before {
+.cml-flag-small-it:before, .cml-flag-small-en:before {
     content: url(.http://mte90.net/wp-content/plugins/ceceppa-multilingua/flags/small/it_IT.png);
     width: 32px;
     height: 33px;
@@ -684,11 +676,6 @@ iframe.instagram-media {
 }
 .cml-flag-small-en:before {
     content: url(http://mte90.net/wp-content/plugins/ceceppa-multilingua/flags/small/en_GB.png);
-    width: 32px;
-    height: 33px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 5px;
 }
 
 .cml_flags li {
@@ -703,6 +690,11 @@ ul.cml_flags {
     padding:0;
     margin-top: -10px;
     margin-bottom: 0px;
+    font-size: 20px;
+}
+
+header ul.cml_flags {
+    margin-top: 0px;
 }
 
 .single {
@@ -740,35 +732,6 @@ li.github-repo-contributor {
     float: left;
     margin-right: 1em;
     margin-bottom: 0.5em;
-}
-
-/* ==========================================================================
-   Sidebar
-   ========================================================================== */
-
-.sidebar {
-    a {
-        color:white;
-        @include skew();
-    }
-}
-
-.widget_yt_widget {
-    margin-left:-15px;
-    margin-right:-15px;
-    min-height: 250px;
-    position: relative;
-    margin-top:10px;
-    z-index: 9999;
-    .fixed_box {
-        top:0;
-    }
-    .videobox {
-        iframe {
-            min-height: 250px;
-            width:100%;
-        }
-    }
 }
 
 .widget_search {
