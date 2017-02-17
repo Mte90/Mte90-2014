@@ -1,7 +1,7 @@
 <div class="social">
   <ul>
     <li>
-      <a class="pulse-shrink social-facebook" href="https://www.facebook.com/Mte90" target="_blank" data-text="<?php _e("I don't add people that don't know, so put up else I will not accept your request!", 'roots') ?>"></a>
+      <a class="pulse-shrink social-facebook" href="https://www.facebook.com/Mte90" target="_blank" data-text="<?php _e("I don't add people that don't know, so write a pm else I will not accept your request!", 'roots') ?>"></a>
     </li>
     <li>
       <a class="pulse-shrink social-twitter" href="https://twitter.com/Mte90Net" target="_blank"></a>
@@ -10,7 +10,7 @@
       <a class="pulse-shrink social-github" href="https://github.com/Mte90"></a>
     </li>
     <li>
-      <a class="pulse-shrink social-linkedin" href="https://www.linkedin.com/in/danielescasciafratte" target="_blank" data-text="<?php _e("I don't add people that don't know, so put up else I will not accept your request!", 'roots') ?>"></a>
+      <a class="pulse-shrink social-linkedin" href="https://www.linkedin.com/in/danielescasciafratte" target="_blank" data-text="<?php _e("I don't add people that don't know, so write a pm else I will not accept your request!", 'roots') ?>"></a>
     </li>
     <li>
       <a class="pulse-shrink social-mozillians" href="https://mozillians.org/u/Mte90/" target="_blank"></a>
@@ -44,6 +44,9 @@
           <?php _e("Debian Sid User", 'roots'); ?>
         </li>
         <li>
+          <?php _e("Mozilla Tech Speaker", 'roots'); ?>
+        </li>
+        <li>
           <?php _e("Open Source Multiversal", 'roots'); ?>
         </li>
         <li>
@@ -51,9 +54,6 @@
         </li>
         <li>
           <?php _e("Mozilla Reps", 'roots'); ?>
-        </li>
-        <li>
-          <?php _e("Mozilla Tech Speaker", 'roots'); ?>
         </li>
       </ul>
     </div>
