@@ -49,8 +49,8 @@ spinner = function() {
 
 draw = function() {
   var ctx, i, o, text;
-  o = document.querySelector(".c");
-  if (o !== null) {
+  if (document.querySelector(".c") !== null) {
+    o = document.querySelector(".c");
     ctx = o.getContext("2d");
     ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
     ctx.fillRect(0, 0, o.width, o.height);
@@ -69,22 +69,24 @@ draw = function() {
   }
 };
 
-document.querySelector("#copy").addEventListener("click", function() {
-  var m, o;
-  if (document.querySelector(".c") === null) {
-    o = document.createElement("canvas");
-    o.classList.add("c");
-    document.body.appendChild(o);
-    window.o_font_size = 10;
-    m = document.createElement("div");
-    m.classList.add("d");
-    m.textContent = "Welcome to Canvas Matrix, Neo";
-    document.body.appendChild(m);
-    window.o_chinese = "田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑";
-    window.o_chinese = window.o_chinese.split("");
-  }
-  spinner();
-}, false);
+document.addEventListener('DOMContentLoaded', function(event) {
+  return document.querySelector("#copy").addEventListener("click", function() {
+    var m, o;
+    if (document.querySelector(".c") === null) {
+      o = document.createElement("canvas");
+      o.classList.add("c");
+      document.body.appendChild(o);
+      window.o_font_size = 10;
+      m = document.createElement("div");
+      m.classList.add("d");
+      m.textContent = "Welcome to Canvas Matrix, Neo";
+      document.body.appendChild(m);
+      window.o_chinese = "田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑";
+      window.o_chinese = window.o_chinese.split("");
+    }
+    spinner();
+  }, false);
+});
 
 window.onkeydown = function(e) {
   if (e.keyCode === 27) {
@@ -140,7 +142,7 @@ if (jQuery(window).width() > 769) {
   jQuery('.main').css('min-height', jQuery('aside').height() + 20);
 }
 
-jQuery('body').backstretch(template.path + '/assets/img/background.jpg');
+jQuery('body').backstretch('/wp-content/themes/mte90-2014/assets/img/background.jpg');
 
 jQuery('.widget_yt_widget .fixed_box').width(jQuery('.widget').parent().width() + 30);
 
@@ -150,7 +152,7 @@ jQuery(window).resize(function() {
   return video_mobile();
 });
 
-jQuery('a').has("img").css({
+jQuery('.main article .entry-content a').has("img").css({
   transform: "none",
   display: "block"
 });

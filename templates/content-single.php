@@ -5,7 +5,9 @@
 <article <?php post_class(); ?>>
 <header>
   <h1 class="entry-title"><?php echo the_title(); ?></h1>
-  <?php echo cml_show_flags(array('only_existings' => true, 'queried' => false)); ?>
+  <ul class="lang-menu">
+    <?php pll_the_languages( array( 'show_flags' => 1 ) ); ?>
+  </ul>
   <?php
     get_template_part('templates/entry-meta');
   ?>

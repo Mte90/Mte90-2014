@@ -41,8 +41,8 @@ spinner = ->
 
 #drawing the characters
 draw = ->
-    o = document.querySelector(".c")
-    if o isnt null
+    if document.querySelector(".c") isnt null
+        o = document.querySelector(".c")
         ctx = o.getContext("2d")
 
         #Black BG for the canvas
@@ -71,26 +71,27 @@ draw = ->
             i++
     return
 
-document.querySelector("#copy").addEventListener "click", ->
-    if document.querySelector(".c") is null
-        o = document.createElement("canvas")
-        o.classList.add "c"
-        document.body.appendChild o
-        window.o_font_size = 10
+document.addEventListener 'DOMContentLoaded', (event) ->
+    document.querySelector("#copy").addEventListener "click", ->
+        if document.querySelector(".c") is null
+            o = document.createElement("canvas")
+            o.classList.add "c"
+            document.body.appendChild o
+            window.o_font_size = 10
 
-        m = document.createElement("div")
-        m.classList.add "d"
-        m.textContent = "Welcome to Canvas Matrix, Neo"
-        document.body.appendChild m
+            m = document.createElement("div")
+            m.classList.add "d"
+            m.textContent = "Welcome to Canvas Matrix, Neo"
+            document.body.appendChild m
 
-        #chinese characters - taken from the unicode charset
-        window.o_chinese = "田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑"
+            #chinese characters - taken from the unicode charset
+            window.o_chinese = "田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑"
 
-        #converting the string into an array of single characters
-        window.o_chinese = window.o_chinese.split("")
-    spinner()
-    return
-, false
+            #converting the string into an array of single characters
+            window.o_chinese = window.o_chinese.split("")
+        spinner()
+        return
+    , false
 
 window.onkeydown = (e) ->
     if e.keyCode is 27

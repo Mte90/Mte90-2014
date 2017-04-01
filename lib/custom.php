@@ -128,7 +128,7 @@ function register_foo_widget() {
 	register_widget( 'YT_Widget' );
 }
 
-add_action( 'widgets_init', 'register_foo_widget' );
+//add_action( 'widgets_init', 'register_foo_widget' );
 
 function oembed_dimensions( $html, $url, $args ) {
 
@@ -235,8 +235,6 @@ add_action( 'wp_enqueue_scripts', function() {
 	if ( !is_admin() ) {
 		wp_dequeue_script( 'quicktags-min' );
 		wp_deregister_script( 'quicktags-min' );
-		wp_dequeue_style( 'ceceppaml-flags' );
-		wp_deregister_style( 'ceceppaml-flags' );
 		wp_dequeue_style( 'github-oembed' );
 		wp_deregister_style( 'github-oembed' );
 	}
@@ -245,13 +243,6 @@ add_action( 'wp_enqueue_scripts', function() {
 		wp_deregister_style( 'crayon' );
 		wp_dequeue_script( 'crayon_js' );
 		wp_deregister_script( 'crayon_js' );
-	}
-	if ( !is_page( 183 ) ) {
-		wp_dequeue_style( 'dlm-page-addon-frontend' );
-		wp_deregister_style( 'dlm-page-addon-frontend' );
-	}
-	if ( !is_singular( array( 'dlm_download' ) ) && !is_post_type_archive( 'dlm_download' ) && !is_tax( 'dlm_download_category' ) && !is_page( 183 ) ) {
-		wp_dequeue_style( 'dlm-frontend' );
 	}
 }, 200 );
 

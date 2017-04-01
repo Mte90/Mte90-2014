@@ -14,7 +14,7 @@ body {
   background: radial-gradient(rgb(5, 81, 146) 15%, transparent 16%) 0 0, radial-gradient(rgb(3, 65, 119) 15%, transparent 16%) 8px 8px, radial-gradient(rgba(5, 81, 146, 0.45) 15%, transparent 20%) 0 1px, radial-gradient(rgba(5, 71, 146, 0.7) 15%, transparent 20%) 8px 9px;
   background-color: rgba(1, 84, 155, 0.89);
   background-size: 16px 16px;
-  
+
   &.modal-open {
     @include transform(scale(0.9));
     .wrapper {
@@ -240,9 +240,6 @@ time {
       padding-left: 0px;
       margin-bottom: 0px;
       overflow: hidden;
-      .cml_flags {
-        margin-top:0px;  
-      }
       & > li {
         height: 176px;
         list-style: none;
@@ -416,6 +413,9 @@ time {
     position: relative;
     left: 40px;
   }
+  .entry-content {
+    margin-top:14px;
+  }
 }
 
 .archive, .blog {
@@ -451,6 +451,26 @@ time {
 
 .content {
   margin-left: 0px;
+}
+
+ul.lang-menu {
+    list-style-type: none;
+    text-align: center;
+    li {
+        display: inline-block;
+    }
+}
+
+.page, .single, .home {
+    ul.lang-menu {
+        margin-top:10px;
+        padding-left: 0px;
+        font-size: 20px;
+        text-transform: uppercase;
+        li {
+            display: inline-block;
+        }
+    }
 }
 
 .main {
@@ -758,75 +778,6 @@ iframe {
 /* Gallery Shortcode */
 .gallery-row {
   padding: 15px 0;
-}
-
-.cml-flag-tiny-it, .cml-flag-tiny-en {
-  &:before {
-    content: url(http://mte90.net/wp-content/plugins/ceceppa-multilingua/flags/tiny/it_IT.png);
-    width: 16px;
-    height: 11px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 5px;
-  }
-}
-
-.cml-flag-tiny-en {
-  :before {
-    content: url(http://mte90.net/wp-content/plugins/ceceppa-multilingua/flags/tiny/en_GB.png);
-  }
-}
-
-.cml-flag-small-it, .cml-flag-small-en {
-  &:before {
-    content: url(.http://mte90.net/wp-content/plugins/ceceppa-multilingua/flags/small/it_IT.png);
-    width: 32px;
-    height: 33px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 5px;
-  }
-}
-
-.cml-flag-small-en {
-  :before {
-    content: url(http://mte90.net/wp-content/plugins/ceceppa-multilingua/flags/small/en_GB.png);
-  }
-}
-
-ul {
-  &.cml_flags {
-    display: block;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 0;
-    margin-top: -10px;
-    margin-bottom: 0px;
-    font-size: 20px;
-
-    li {
-      height: auto !important;
-      margin: 0;
-    }
-  }
-}
-
-header {
-  ul {
-    &.cml_flags {
-      margin-top: 0px;
-    }
-  }
-}
-
-.single {
-  ul {
-    .cml_flags_on_title_before {
-      img {
-        margin-bottom: 5px;
-      }
-    }
-  }
 }
 
 .backstretch > img {

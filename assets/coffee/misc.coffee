@@ -13,7 +13,7 @@ jQuery('.last-events').flowtype
 if jQuery(window).width() > 769
   jQuery('.main').css('min-height',(jQuery('aside').height() + 20))
 
-jQuery('body').backstretch(template.path + '/assets/img/background.jpg')
+jQuery('body').backstretch('/wp-content/themes/mte90-2014/assets/img/background.jpg')
 jQuery('.widget_yt_widget .fixed_box').width((jQuery('.widget').parent().width() + 30))
 
 video_mobile()

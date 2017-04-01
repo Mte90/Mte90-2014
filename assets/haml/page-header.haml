@@ -1,4 +1,4 @@
 %div.page-header.entry-title
 	%h1= roots_title()
 
-<?php if(is_page()) { echo cml_show_flags(array('only_existings' => true, 'queried' => false)); } ?>
+<?php if(is_page()) { echo '<ul class="lang-menu">'; pll_the_languages( array( 'show_flags' => 1 ) ); echo '</ul>'; } ?>

@@ -10,21 +10,23 @@
   <ul class="box-carousel">
     <?php
       $first = true;
-      $the_query = new WP_Query('showposts=6&orderby=date&order=DESC&cat=-31'); 
+      $the_query = new WP_Query('showposts=6&orderby=date&order=DESC&cat=-31');
       while ($the_query -> have_posts()) : $the_query -> the_post();
       $show = 'second';
       if($first) {
       	$show = '';
       	$first = false;
-      } 
+      }
     ?>
     <li class="<?php echo $show; ?>">
-      <?php echo cml_show_flags(array('only_existings' => true, 'queried' => false)); ?>
+      <ul class="lang-menu">
+        <?php pll_the_languages( array( 'show_flags' => 1 ) ); ?>
+      </ul>
       <a href="<?php the_permalink() ?>" class="float-hover"><?php echo $post->post_title; ?></a>
       <?php
         get_template_part('templates/entry-meta');
         $metadesc = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true);
-        if (!empty($metadesc)) { echo '<p>'.$metadesc.'</p>'; } 
+        if (!empty($metadesc)) { echo '<p>'.$metadesc.'</p>'; }
         else { the_excerpt(); }
       ?>
     </li>
@@ -39,21 +41,23 @@
   <ul class="box-carousel">
     <?php
       $first = true;
-      $the_query = new WP_Query('showposts=6&orderby=date&order=DESC&cat=31'); 
-      while ($the_query -> have_posts()) : $the_query -> the_post(); 
+      $the_query = new WP_Query('showposts=6&orderby=date&order=DESC&cat=31');
+      while ($the_query -> have_posts()) : $the_query -> the_post();
       $show = 'second';
       if($first) {
       	$show = '';
       	$first = false;
-      } 
+      }
     ?>
     <li class="<?php echo $show; ?>">
-      <?php echo cml_show_flags(array('only_existings' => true, 'queried' => false)); ?>
+      <ul class="lang-menu">
+        <?php pll_the_languages( array( 'show_flags' => 1 ) ); ?>
+      </ul>
       <a href="<?php the_permalink() ?>" class="float-hover"><?php echo $post->post_title; ?></a>
       <?php
         get_template_part('templates/entry-meta');
         $metadesc = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true);
-        if (!empty($metadesc)) { echo '<p>'.$metadesc.'</p>'; } 
+        if (!empty($metadesc)) { echo '<p>'.$metadesc.'</p>'; }
         else { the_excerpt(); }
       ?>
     </li>
@@ -117,8 +121,8 @@
   <ul>
     <?php
       $i = 0;
-      $the_query = new WP_Query('showposts=5&orderby=date&order=DESC&post_type=guest_post'); 
-      while ($the_query -> have_posts()) : $the_query -> the_post(); 
+      $the_query = new WP_Query('showposts=5&orderby=date&order=DESC&post_type=guest_post');
+      while ($the_query -> have_posts()) : $the_query -> the_post();
       $i++;
       if($i < 4) {
       	$block = 'first-block';

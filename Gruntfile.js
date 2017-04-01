@@ -70,6 +70,7 @@ module.exports = function (grunt) {
             'assets/js/plugins/bootstrap/bootbox.js',
             'assets/js/vendor/flowtype-1.1.js',
             'assets/js/vendor/jquery.backstretch.js',
+            'assets/js/script.js',
           ]
         }
       }
