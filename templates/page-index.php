@@ -10,7 +10,7 @@
   <ul class="box-carousel">
     <?php
       $first = true;
-      $the_query = new WP_Query('showposts=6&orderby=date&order=DESC&cat=-31');
+      $the_query = new WP_Query('showposts=6&orderby=date&order=DESC&cat=-31&lang=');
       while ($the_query -> have_posts()) : $the_query -> the_post();
       $show = 'second';
       if($first) {
@@ -121,7 +121,7 @@
   <ul>
     <?php
       $i = 0;
-      $the_query = new WP_Query('showposts=5&orderby=date&order=DESC&post_type=guest_post');
+      $the_query = new WP_Query('showposts=5&orderby=date&order=DESC&post_type=guest_post&lang=');
       while ($the_query -> have_posts()) : $the_query -> the_post();
       $i++;
       if($i < 4) {
