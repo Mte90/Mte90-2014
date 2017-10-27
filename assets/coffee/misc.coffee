@@ -14,7 +14,7 @@ if jQuery(window).width() > 769
   jQuery('.main').css('min-height',(jQuery('aside').height() + 20))
 
 jQuery('body').backstretch('/wp-content/themes/mte90-2014/assets/img/background.jpg')
-jQuery('.widget_yt_widget .fixed_box').width((jQuery('.widget').parent().width() + 30))
+# jQuery('.widget_yt_widget .fixed_box').width((jQuery('.widget').parent().width() + 30))
 
 video_mobile()
 
@@ -22,8 +22,6 @@ jQuery(window).resize ->
   video_mobile()
 
 jQuery('.main article .entry-content a').has("img").css({transform: "none", display: "block"})
-
-jQuery('.entry-content-asset').has(".github-embed").css('padding-bottom', "25%")
 
 jQuery('.main article .entry-content img').each (index) ->
   if jQuery(this).attr('width') < 500

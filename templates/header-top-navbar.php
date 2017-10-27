@@ -25,14 +25,14 @@
       <a class="pulse-shrink social-youtube" href="https://www.youtube.com/user/Mte90lp" target="_blank"></a>
     </li>
     <li>
-      <a class="pulse-shrink social-feed" href="<?php echo home_url() . '/feed' ?>" target="_blank" data-text="This site is multilanguage (Italian and English) pick your feed:<br><br><b>Italian - https://mte90.net/feed/</b><br><b>English - https://mte90.net/en/feed/</b>"></a>
+      <a class="pulse-shrink social-feed" href="<?php echo home_url() . '/feed' ?>" target="_blank" data-text="This site is multilanguage (Italian and English) pick your feed:<br><br><b>Italian - https://mte90.net/it/feed/</b><br><b>English - https://mte90.net/en/feed/</b>"></a>
     </li>
   </ul>
 </div>
 <header class="banner navbar navbar-default navbar-static-top" role="banner">
   <div class="container-fluid">
     <div class="slogan">
-      Daniele "Mte90" Scasciafratte - 
+      Daniele "Mte90" Scasciafratte -
       <ul>
         <li>
           <?php _e("The Eternauta Geek", 'roots'); ?>

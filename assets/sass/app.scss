@@ -533,16 +533,20 @@ ul.lang-menu {
   margin: 0 auto !important;
   position: relative;
   width: 80%;
+  text-align:center;
 
   &.twitter {
     twitterwidget {
       margin: 0 auto;
     }
   }
+  &.github {
+    padding-bottom:0;
+  }
 
   &.youtube {
     padding-top: 30px;
-    padding-bottom: 80%;
+    padding-bottom: 50%;
 
     iframe {
       height: 100%;
@@ -562,8 +566,8 @@ ul.lang-menu {
 }
 
 iframe {
-  .instagram-media {
-    max-width: 80% !important;
+  &.instagram-media {
+    max-width: 50% !important;
     margin: 0 auto !important;
   }
 }
