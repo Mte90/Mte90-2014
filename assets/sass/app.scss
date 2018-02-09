@@ -476,6 +476,7 @@ ul.lang-menu {
 .main {
   article {
     background: white;
+    margin-right: 2px;
     background-color: rgba(255, 255, 255, 0.6);
     color: black;
 
@@ -569,6 +570,7 @@ iframe {
   &.instagram-media {
     max-width: 50% !important;
     margin: 0 auto !important;
+    position: relative !important;
   }
 }
 
