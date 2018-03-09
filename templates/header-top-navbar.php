@@ -22,6 +22,9 @@
       <a class="pulse-shrink social-instagram" href="https://instagram.com/Mte90"></a>
     </li>
     <li>
+      <a class="pulse-shrink social-mastodon" href="https://mastodonti.co/@Mte90" target="_blank"></a>
+    </li>
+    <li>
       <a class="pulse-shrink social-youtube" href="https://www.youtube.com/user/Mte90lp" target="_blank"></a>
     </li>
     <li>
