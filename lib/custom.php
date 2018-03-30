@@ -298,7 +298,7 @@ if(is_admin()) {
     add_filter( 'list_terms_exclusions', 'hide_specific_category', 10, 2 );
 
     function hide_specific_category($exclusions,$args){
-        $exclusions = " AND ( t.term_id NOT IN (21,42,14,30,99,113,115) )";
+        $exclusions = " AND ( t.term_id NOT IN (21,42,14,30,99,113,115, 91, 170, 28, 105, 166, 33, 261, 95, 48) )";
         return $exclusions;
     }
 }
