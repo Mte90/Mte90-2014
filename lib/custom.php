@@ -50,7 +50,7 @@ function cmb_metaboxes( array $meta_boxes ) {
 
 	// Start with an underscore to hide fields from custom fields list
 	$prefix = '_cmb_';
-
+/*
 	$meta_boxes[ 'mte_metabox' ] = array(
 	    'id' => 'mte_metabox',
 	    'title' => __( 'Video', 'cmb' ),
@@ -65,7 +65,7 @@ function cmb_metaboxes( array $meta_boxes ) {
 		    'type' => 'text_url',
 		),
 	    )
-	);
+	);*/
 
 	$meta_boxes[ 'mte_gp_metabox' ] = array(
 	    'id' => 'mte_gp_metabox',
@@ -178,8 +178,8 @@ function guest_post() {
 	    'show_in_admin_bar' => true,
 	    'menu_position' => 11,
 	    'can_export' => true,
-	    'has_archive' => true,
-	    'exclude_from_search' => false,
+	    'has_archive' => 'guest-post',
+	    'exclude_from_search' => true,
 	    'publicly_queryable' => true,
 	    'capability_type' => 'page',
 	    'rewrite' => array( 'slug' => 'guest-post' )
