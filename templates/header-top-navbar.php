@@ -28,7 +28,7 @@
       <a class="pulse-shrink social-youtube" href="https://www.youtube.com/user/Mte90lp" target="_blank"></a>
     </li>
     <li>
-      <a class="pulse-shrink social-feed" href="<?php echo home_url() . '/feed' ?>" target="_blank" data-text="This site is multilanguage (Italian and English) pick your feed:<br><br><b>Italian - https://mte90.net/it/feed/</b><br><b>English - https://mte90.net/en/feed/</b>"></a>
+      <a class="pulse-shrink social-feed" href="<?php echo home_url() . '/feed' ?>" target="_blank" data-text="This site is multilanguage (Italian and English) pick your feed:<br><br><b>Italian - https://daniele.tech/it/feed/</b><br><b>English - https://daniele.tech/en/feed/</b>"></a>
     </li>
   </ul>
 </div>
