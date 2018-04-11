@@ -178,7 +178,7 @@ function guest_post() {
 	    'show_in_admin_bar' => true,
 	    'menu_position' => 11,
 	    'can_export' => true,
-	    'has_archive' => 'guest-post',
+	    'has_archive' => 'false',
 	    'exclude_from_search' => true,
 	    'publicly_queryable' => true,
 	    'capability_type' => 'page',
