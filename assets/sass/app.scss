@@ -608,6 +608,13 @@ iframe {
   }
 }
 
+.guest-post .entry-title {
+    display: block;
+    margin: 0 !important;
+    padding-bottom: 0;
+    margin-bottom: 9px;
+}
+
 .error404, .page {
   .content, .wrap {
     padding: 0px !important;
