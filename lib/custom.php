@@ -33,57 +33,30 @@ function remove_home_class( $classes ) {
 
 add_filter( 'body_class', 'remove_home_class', 10, 3 );
 
-add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
-
-/**
- * Initialize the metabox class.
- */
-function cmb_initialize_cmb_meta_boxes() {
-
-	if ( !class_exists( 'cmb_Meta_Box' ) )
-		require_once 'cmb/init.php';
+if ( file_exists( dirname( __FILE__ ) . '/cmb2/init.php' ) ) {
+  require_once 'cmb2/init.php';
 }
 
-add_filter( 'cmb_meta_boxes', 'cmb_metaboxes' );
+add_action( 'cmb2_admin_init', 'register_demo_metabox' );
 
-function cmb_metaboxes( array $meta_boxes ) {
-
-	// Start with an underscore to hide fields from custom fields list
+function register_demo_metabox( ) {
 	$prefix = '_cmb_';
-/*
-	$meta_boxes[ 'mte_metabox' ] = array(
-	    'id' => 'mte_metabox',
-	    'title' => __( 'Video', 'cmb' ),
-	    'pages' => array( 'post', ), // Post type
-	    'context' => 'normal',
-	    'priority' => 'high',
-	    'show_names' => true, // Show field names on the left
-	    'fields' => array(
-		array(
-		    'name' => __( 'Video', 'cmb' ),
-		    'id' => $prefix . 'video',
-		    'type' => 'text_url',
-		),
-	    )
-	);*/
 
-	$meta_boxes[ 'mte_gp_metabox' ] = array(
-	    'id' => 'mte_gp_metabox',
-	    'title' => __( 'Link', 'cmb' ),
-	    'pages' => array( 'guest_post', ), // Post type
-	    'context' => 'normal',
-	    'priority' => 'high',
-	    'show_names' => true, // Show field names on the left
-	    'fields' => array(
-		array(
-		    'name' => __( 'Link', 'cmb' ),
-		    'id' => $prefix . 'gp_link',
-		    'type' => 'text_url',
-		),
-	    )
-	);
+	$cmb_demo = new_cmb2_box( array(
+		'id'            => 'mte_gp_metabox',
+		'title'         => esc_html__( 'Link', 'cmb2' ),
+		'object_types'  => array( 'guest_post' ), // Post type
+    'context' => 'normal',
+	  'priority' => 'high',
+	  'show_names' => true, // Show field names on the left
+	) );
+	$cmb_demo->add_field( array(
+		'name' => __( 'Link', 'cmb' ),
+    'id' => $prefix . 'gp_link',
+    'type' => 'text_url',
+    )
+  );
 
-	return $meta_boxes;
 }
 
 class YT_Widget extends WP_Widget {
