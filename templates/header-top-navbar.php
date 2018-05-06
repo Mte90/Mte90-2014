@@ -30,6 +30,9 @@
     <li>
       <a class="pulse-shrink social-feed" href="<?php echo home_url() . '/feed' ?>" target="_blank" data-text="This site is multilanguage (Italian and English) pick your feed:<br><br><b>Italian - https://daniele.tech/it/feed/</b><br><b>English - https://daniele.tech/en/feed/</b>"></a>
     </li>
+    <li>
+      <a class="pulse-shrink social-patreon" href="https://www.patreon.com/Mte90" target="_blank"></a>
+    </li>
   </ul>
 </div>
 <header class="banner navbar navbar-default navbar-static-top" role="banner">
