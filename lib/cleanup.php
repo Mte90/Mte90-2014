@@ -126,7 +126,10 @@ add_filter('body_class', 'roots_body_class');
  * @link http://www.readability.com/publishers/guidelines#publisher
  */
 function roots_embed_wrap($cache, $url, $attr = '', $post_ID = '') {
-  return '<div class="entry-content-asset">' . $cache . '</div>';
+  if ( false !== strpos( $url, 'youtube.com' ) ) {
+    $class = ' youtube';
+  }
+  return '<div class="entry-content-asset' . $class . '">' . $cache . '</div>';
 }
 add_filter('embed_oembed_html', 'roots_embed_wrap', 10, 4);
 

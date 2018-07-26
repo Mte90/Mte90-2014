@@ -464,6 +464,7 @@ ul.lang-menu {
 .page, .single, .home {
     ul.lang-menu {
         margin-top:10px;
+        margin-bottom: 0px;
         padding-left: 0px;
         font-size: 20px;
         text-transform: uppercase;
@@ -553,15 +554,12 @@ ul.lang-menu {
   width: 80%;
   text-align:center;
 
-  &.twitter {
-    twitterwidget {
-      margin: 0 auto;
-    }
+  .twitter-tweet {
+    margin: 0 auto;
   }
-  &.github {
+  .github {
     padding-bottom:0;
   }
-
   &.youtube {
     padding-top: 30px;
     padding-bottom: 50%;
@@ -654,7 +652,7 @@ iframe {
   .main {
     padding: 10px;
     background: white;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(214, 230, 255, 0.6);
     color: black;
   }
 
