@@ -56,7 +56,7 @@
           <?php _e("Open Source Multiversal", 'roots'); ?>
         </li>
         <li>
-          <?php _e("Serious Comics Collector", 'roots'); ?>
+          <?php _e("Catholic guy", 'roots'); ?>
         </li>
         <li>
           <?php _e("Mozilla Reps", 'roots'); ?>

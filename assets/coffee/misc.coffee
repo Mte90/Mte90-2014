@@ -10,17 +10,6 @@ jQuery('.last-events').flowtype
   minFont: 12,
   maxFont: 20
 
-if jQuery(window).width() > 769
-  jQuery('.main').css('min-height',(jQuery('aside').height() + 20))
-
-jQuery('body').backstretch('/wp-content/themes/mte90-2014/assets/img/background.jpg')
-# jQuery('.widget_yt_widget .fixed_box').width((jQuery('.widget').parent().width() + 30))
-
-video_mobile()
-
-jQuery(window).resize ->
-  video_mobile()
-
 jQuery('.main article .entry-content a').has("img").css({transform: "none", display: "block"})
 
 jQuery('.main article .entry-content img').each (index) ->
